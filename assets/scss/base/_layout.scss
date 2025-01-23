@@ -1,0 +1,99 @@
+#wrap {
+
+	.header-top-banner{
+		position:relative;
+		
+
+		.banner-close{
+			@include close(50px, 50px, 1px, #000);
+			top:50%;
+			margin-top:-25px;
+		}
+	}
+
+	#header {
+        position: relative;
+        text-align: center;
+        vertical-align: top;
+		.header-util{
+			.wrap{
+				display:flex;
+				justify-content: flex-end;
+			}
+		}
+		.header-gnb{}
+    }
+
+
+    &.open {
+        height: 100vh;
+        overflow: hidden;
+        #header {
+            &:before {
+                content: '&nbsp;';
+                @extend .dim;
+                z-index: 9;
+                @include transition(all, .3s);
+            }
+            .menu {
+                z-index: 20;
+                background-image: url('../img/common/icon_close.png');
+            }
+            .nav { display: block; }
+        }
+    }
+
+
+
+	#contents {
+		@extend %clearfix; 
+		@include vw(padding, 100px 0);
+   }
+
+    #footer {
+        @include vw(padding-bottom, 40px);
+        text-align: center;
+        @include vw(font-size, 20px);
+        border-top: 1px solid $border-color-1;
+        @extend %clearfix;
+        @include breakpoint(desktop){
+            padding-bottom: 20px;
+        }
+        article {
+            padding: 0;
+            @extend %clearfix;
+        }
+        .logo {
+            @include vw(margin-top, 40px);
+            @include breakpoint(desktop){
+                float: left;
+                margin-top: 20px;
+            }
+            a {
+                display: inline-block;
+                width: percent(140);
+                @include breakpoint(desktop){
+                    width: auto;
+                }
+            }
+        }
+        .copyright {
+            @include vw(margin-top, 20px);
+            @include breakpoint(desktop){
+                float: left;
+                margin-top: 40px;
+                margin-left: 20px;
+                font-size: 14px;
+            }
+        }
+        .action {
+            @include vw(margin-top, 20px);
+            @include breakpoint(desktop){
+                float: right;
+                margin-top: 30px;
+            }
+        }
+    }
+
+
+}

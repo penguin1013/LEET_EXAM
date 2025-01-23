@@ -1,0 +1,32 @@
+$font-noto: ('Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
+$font-gmarket: ('GmarketSans', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
+$font-verdana: (Verdana, Geneva, Tahoma, sans-serif);
+$font-pretendard: ('Pretendard', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
+$font-notoSerifKr: ('Noto Serif KR', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
+$font-Wemakeprice: ('Wemakeprice', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', 'Dotum', '돋움', 'Gulim', '굴림', '굴림체', Sans-Serif);
+$font-eskorte: ('Eskorte', 'Noto Serif KR', 'Apple SD Gothic Neo', 'Nanum Myeongjo', 'Batang', '돋움', serif);
+
+$max-width: 1200;
+$min-mobile: 320;
+$max-mobile: 720;
+
+// color
+$color-black: #2C2923;
+$color-gray: #7A746A;
+$color-brown:#A07D3B;
+$color-light-brown:#E4DED3; // rgba(228, 222, 211, 1);
+$color-light-brown2:#F2EFE7;
+$color-light-beige:#FBFAF6;
+$color-light-gray: #BEBEBC; //rgba(190, 190, 188, 1)
+$color-white:#FFFFFC;
+
+$color-light-black:#3b3b3b; // rgba(59, 59, 59, 1)
+$color-777:#777; // rbga(119,119,119,1)
+$color-dark-black:#242321;
+// z-index
+// z-index: map-get($z-index, dim);
+$z-index: (
+    close: 250,
+    layer: 200,
+    dim: 100
+);

@@ -1,0 +1,681 @@
+#wrap{
+
+	.promotion{
+		.wrap{
+			max-width:600px;
+			//max-width:375px;
+			margin:0 auto;
+		}
+	}
+	.section-promotion-title{
+		@include vw(padding-top,60px);
+		@include vw(padding-bottom,40px);
+		text-align:center;
+		.head-copy{
+			color:$color-gray;
+			@include vw(font-size,16px);
+			font-weight:600;
+			@include vw(line-height,27.2px);
+			@include vw(margin-bottom,18px);
+		}
+		.main-copy{
+			position: relative;
+			color:$color-black;
+			@include vw(font-size,27px);
+			font-weight:400;
+			@include vw(line-height, 40.5px);
+			letter-spacing:-1px;
+			small {
+				position: relative;
+				@include vw(top, -15px);
+				// right: 0;
+				@include vw(font-size, 10px);
+				font-weight: 400;
+				color: #888;
+			}
+		}
+	}
+
+	.section-promotion-profile{
+		@include vw(padding-bottom,90px);
+		.img-box{
+			img{width:100%;}
+			+ .img-box {
+				@include vw(margin-top, 24px);
+			}
+		}
+
+		.profile-box{
+			@include vw(padding-top,40px);
+
+			.text-box{
+				@include vw(font-size,16px);
+				line-height:2;
+				color:$color-black;
+				font-weight:400;
+				letter-spacing:-1px;
+				font-family:$font-notoSerifKr;
+			}
+			.menu-box{
+				@include vw(margin-top,40px);
+				display:flex;
+				justify-content: space-between;
+				.menu-title{
+					font-weight:600;
+					line-height:1.7;
+					@include vw(font-size,16px);
+				}
+				.menu-list{
+					@include vw(width,164px);
+					border-top:1px solid $color-light-brown;
+					li{
+						border-bottom:1px solid $color-light-brown;
+						@include vw(font-size,14px);
+						line-height:1.7;
+						color:$color-black;
+						font-weight:400;
+						@include vw(padding,10px 0);
+					}
+				}
+			}
+		}
+		.notice{
+			color:$color-light-gray;
+			@include vw(font-size,14px);
+			line-height: 1.5;
+			font-family: $font-pretendard;
+			letter-spacing:0px;
+		}
+	}
+
+	.section-promotion-curriculum{
+		.curriculum-list{
+			@include vw(padding-top, 80px);
+			&:first-child{
+				border-top:1px solid #DCDCDB;
+				//@include vw(padding-top, 80px);
+			}
+			&.border-none {
+				border: none;
+			}
+			&:not(:first-child) {
+				//@include vw(padding-top, 24px);
+			}
+			&.pb-0 {
+				padding-bottom: 0;
+			}
+			.curriculum-title{
+				color:$color-black;
+				@include vw(font-size,20px);
+				font-weight:600;
+				@include vw(line-height,34px);
+				@include vw(margin-bottom,24px);
+				span {
+					display: block;
+					@include vw(font-size, 11px);
+					color: #000;
+					@include vw(margin-top, 10px);
+				}
+
+				strong{
+					color:#0084FF;
+				}
+			}
+
+			.curriculum-text{
+				color:$color-black;
+				@include vw(font-size,20px);
+				font-weight:600;
+				@include vw(line-height,34px);
+				@include vw(margin-bottom,24px);
+			}
+
+			.curriculum-content{
+
+				.img-box{
+					@include vw(margin-bottom,40px);
+					img{width:100%;}
+				}
+
+				.review-list{
+					li{
+						@include vw(margin-top,20px);
+						&:first-child{
+							margin-top:0;
+						}
+					}
+				}
+
+				.banner-slider{
+					display:flex;
+					.list{
+						@include vw(width,264px);
+						@include vw(margin-left,16px);
+						&:first-child{margin-left:0;}
+
+						img{width:100%;}
+					
+					}
+				}
+
+				.list{
+					li{
+						color:$color-black;
+						@include vw(font-size,16px);
+						font-weight:400;
+						line-height:1.7;
+					}
+				}
+
+				p{
+					color:$color-black;
+					@include vw(font-size,18px);
+					font-weight:600;
+					@include vw(line-height,30.6px);
+					@include vw(margin-bottom,24px);
+					strong{
+						font-weight:600;
+					}
+					.underline{
+						//border-bottom:2px solid $color-black;
+						font-weight:600;
+						text-underline-offset: 3px;
+						text-decoration: underline solid 1px;
+					}
+				}
+
+				.badge{
+					display:inline-block;
+					@include vw(margin-bottom,22px);
+					@include vw(font-size,14px);
+					@include vw(height, 24px);
+					@include vw(padding,0 6px);
+					@include vw(line-height,24px);
+				}
+
+				.video-box{
+					position:relative;
+					width:100%;
+					//@include vw(height,212px);
+					padding-bottom: 56.25%; 
+					height: 0;
+					overflow:hidden;
+					a{
+						display:block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: inherit;
+
+						img{width:100%;}
+						&:after{
+							content:'';
+							position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;z-index:1;
+							background:rgba(0,0,0,0.4) url(../images/promotion/btn_play.svg) no-repeat 50% 50%;
+							@include vw(background-size,40px 40px);
+						}
+					}
+					+ p {
+						@include vw(margin-top, 24px);
+					}
+				}
+
+				.notice {
+					@include vw(font-size, 14px);
+					line-height: 1.5;
+					color: $color-light-gray;
+					@include vw(margin-top, -32px);
+					margin-bottom: 0;
+				}
+			}
+
+			.number-list {
+				@include vw(margin-bottom, 40px);
+				.list {
+					@include vw(padding, 24px 0 0);
+					> ul {
+
+						> li {
+							position: relative;
+							@include vw(font-size, 16px);
+							font-weight: 700;
+							line-height: 1.5;
+							@include vw(padding, 24px 20px);
+							border-bottom: 1px solid #E4DED3;
+							&:first-child {
+								padding-top: 0;
+							}
+							&:last-child {
+								border-bottom: none;
+								padding-bottom: 0;
+							}
+							span {
+								position: absolute;
+								left: 0
+							}
+						}
+						.sub-list {
+							@include vw(margin-top, 12px);
+							ul {
+								list-style: disc;
+								li {
+									font-weight: 400
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.step {
+				&-list {
+					@include vw(margin-bottom, 24px);
+					&:last-child {
+						margin-bottom: 0
+					}
+				}
+				&-title {
+					color: #69433F;
+					@include vw(padding, 24px);
+					background: #EECAC6;
+					p {
+						@include vw(font-size, 18px);
+						font-weight: 500;
+						line-height: 1.4;
+						@include vw(margin-bottom, 8px);
+					}
+					span {
+						@include vw(font-size, 24px);
+						font-weight: 700;
+						line-height: 1.4
+					}
+				}
+				&-text {
+					@include vw(padding, 24px);
+					background: #E8E8E8;
+					p {
+						@include vw(font-size, 18px);
+						line-height: 1.7;
+						margin: 0;
+					}
+				}
+			}
+
+			.recommend {
+				p {
+					margin: 0;
+				}
+				&-table {
+					border-top: 1px solid $color-light-brown;
+					.list {
+						display: flex;
+						align-items: center;
+						@include vw(font-size, 14px);
+						border-bottom: 1px solid $color-light-brown;
+						&-title {
+							@include vw(padding, 24px 0);
+							p {
+								@include vw(width, 180px);
+								font-weight: 700;
+								line-height: 1.8;
+								@include vw(margin-right, 40px);
+							}
+						}
+						&-text {
+							span {
+								display: block;
+								@include vw(font-size, 14px);
+								font-weight: 400;
+								line-height: 1.7
+							}
+						}
+						&-depth {
+							.list-title {
+								@include vw(width, 87px);
+								margin-right: 0
+							}
+							.list-text {
+								@include vw(padding, 24px 16px);
+								border-left: 1px solid $color-light-brown;
+								li {
+									display: flex;
+									align-items: center;
+									line-height: 1.7;
+									@include vw(font-size, 14px);
+									@include vw(margin-bottom, 24px);
+									&:last-child {
+										margin-bottom: 0
+									}
+									p {
+										@include vw(width,80px);
+										@include vw(margin-right, 24px);
+										font-weight: 700;
+									}
+								}
+							}
+						}
+					}
+				}
+				&-type {
+					@include vw(margin-top, 24px);
+					li {
+						position: relative;
+						@include vw(font-size, 12px);
+						line-height: 2;
+						font-weight: 400;
+						@include vw(padding-left, 12px);
+						&:before {
+							content: "·";
+							position: absolute;
+							left: 0;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	.section-promotion-study {
+		.slider {
+			@include vw(padding, 20px);
+			padding-right: 0 !important;
+			background: #2C2923;
+			.list {
+				@include vw(width, 280px);
+				@include vw(margin-right, 24px);
+			}
+		}
+	}
+	.section-promotion-schedule {
+		@include vw(margin-top, 56px);
+		.wrap {
+			overflow: auto;
+			padding: 0;
+			img {
+				max-width: none;
+				@include vw(width, 891px);
+			}
+		}
+	}
+
+	.section-promotion-solution {
+		@include vw(padding-top, 64px);
+
+		.solution {
+			@include vw(padding-bottom, 40px);
+			@include vw(margin-bottom, 64px);
+			&:last-child {
+				@include vw(margin-bottom, 40px);
+			}
+			border-bottom: 1px solid #000;
+			&-title {
+				@include vw(padding, 12px 16px);
+				p {
+					@include vw(font-size, 20px);
+					font-weight: 700;
+					color: #390040;
+					line-height: 1.7
+				}
+			}
+			&-label {
+				@include vw(margin-bottom, 24px);
+				@include vw(padding, 8px 16px);
+				background: #390040;
+				p {
+					@include vw(font-size, 24px);
+					font-weight: 700;
+					color: #fff;
+					line-height: 1.7
+				}
+			}
+			.slider {
+				@include vw(padding-left, 16px);
+				.list {
+					@include vw(width, 273px);
+					@include vw(margin-right, 36px);
+				}
+			}
+		}
+	}
+
+	.section-promotion-story{
+		.wrap{
+			@include vw(padding-bottom,30px);
+
+		}
+	
+		.story-box{
+			@include vw(padding-top,40px);
+			border-top:1px solid #DCDCDB;
+			.text-box{
+				@include vw(font-size,16px);
+				line-height:1.8;
+				color:$color-black;
+				font-weight:400;
+				letter-spacing:-1px;
+			}
+
+		}
+	
+	}
+
+
+	.section-promotion-banner{
+		img{width:100%;}
+	}
+
+	.section-promotion-lecture{
+		@include vw(padding-top,80px);
+		.action{
+			@include vw(margin-top,20px);
+			.btn{
+				width:50%;
+				@include vw(margin-left,8px);
+				&:first-child{margin-left:0;}
+			}
+		}
+	}
+
+
+	/* 241231 PR 전체수정 */
+	.section-pr-title{
+		@include vw(padding-top,40px);
+		h3{
+			@include vw(margin-bottom,24px);
+		}
+		.tab-menu{
+			padding:0;
+		
+		}
+	}
+	.section-pr-profile{
+		@include vw(padding-top,60px);
+		.profile-title{@include vw(margin-bottom, 40px);}
+		.profile-text{@include vw(margin-top, 40px);}
+		.profile-menu-box{
+			@include vw(margin-top,60px);
+			display:flex;
+			justify-content: space-between;
+			.menu-title{
+				font-weight:600;
+				@include vw(line-height,27.26px);
+				@include vw(font-size,16px);
+			}
+			.menu-list{
+				@include vw(width,164px);
+				border-top:1px solid #ddd;
+				li{
+					border-bottom:1px solid #ddd;
+					@include vw(font-size,14px);
+					@include vw(line-height,23.8px);
+					color:$color-black;
+					font-weight:400;
+					@include vw(padding,10px 0);
+				}
+			}
+		}
+	}
+
+	.section-pr-content{
+		.curriculum-img{
+			@include vw(margin-top, 140px);
+			img{width:100%;}
+		}
+	}
+
+	.section-pr-curriculum{
+		@include vw(margin-top, 140px);
+		.curriculum-list{
+			.curriculum-title{
+				color:$color-black;
+				@include vw(font-size,20px);
+				font-weight:300;
+				@include vw(line-height,30px);
+				@include vw(margin-bottom,8px);
+				span {
+					display: block;
+					@include vw(font-size, 11px);
+					color: #000;
+					@include vw(margin-top, 10px);
+				}
+
+				strong{
+					color:#0084FF;
+				}
+			}
+
+			.curriculum-content{
+				p{
+					color:#666;
+					@include vw(font-size,16px);
+					font-weight:300;
+					@include vw(line-height,27.2px);
+					@include vw(margin-bottom,24px);
+					
+					strong{
+						font-weight:600;
+					}
+					.underline{
+						//border-bottom:2px solid $color-black;
+						font-weight:600;
+						text-underline-offset: 3px;
+						text-decoration: underline solid 1px;
+					}
+				}
+
+				.video-box{
+					position:relative;
+					width:100%;
+					//@include vw(height,212px);
+					padding-bottom: 56.25%; 
+					height: 0;
+					overflow:hidden;
+					a{
+						display:block;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						object-fit: inherit;
+
+						img{width:100%;}
+						&:after{
+							content:'';
+							position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;z-index:1;
+							background: url(../images/pr/btn_play.svg) no-repeat 2% 97.5%;
+							@include vw(background-size,48px 48px);
+						}
+					}
+					
+				}
+
+				.notice {
+					@include vw(font-size, 14px);
+					line-height: 1.5;
+					color: $color-light-gray;
+					@include vw(margin-top, -32px);
+					margin-bottom: 0;
+				}
+			}
+		}
+		
+	}
+
+	.section-pr-video{
+		.curriculum-img{
+			@include vw(margin-top, 140px);
+			img{width:100%;}
+		}
+
+		.video-box{
+			@include vw(margin-top, 24px);
+			position:relative;
+			width:100%;
+			//@include vw(height,212px);
+			padding-bottom: 56.25%; 
+			height: 0;
+			overflow:hidden;
+			a{
+				display:block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: inherit;
+
+				img{width:100%;}
+				&:after{
+					content:'';
+					position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%;z-index:1;
+					background: url(../images/pr/btn_play.svg) no-repeat 2% 97.5%;
+					@include vw(background-size,48px 48px);
+				}
+			}
+			
+		}
+
+	}
+
+	.section-pr-schedule{
+		.curriculum-img{
+			@include vw(margin-top, 64px);
+			img{width:100%;}
+		}
+	}
+
+	.section-pr-schedule2 {
+		@include vw(margin-top, 24px);
+	}
+
+	.section-pr-schedule {
+		@include vw(margin-top, 24px);
+		// .wrap {
+		// 	overflow: auto;
+		// 	img {
+		// 		max-width:none;
+		// 		@include vw(width, 891px);
+		// 	}
+		// }
+	}
+
+	.section-pr-lecture{
+		@include vw(margin-top, 140px);
+
+		.action{
+			@include vw(margin-top,20px);
+			.btn{
+				width:50%;
+				@include vw(margin-left,8px);
+				&:first-child{margin-left:0;}
+			}
+		}
+	}
+
+
+
+}
