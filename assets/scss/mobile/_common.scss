@@ -31,7 +31,7 @@
   }
 
   .color-point {
-    color: #e50000 !important;
+    color: $color-red !important;
   }
 
   .text-left {
@@ -75,7 +75,7 @@
   }
 
   .tab-menu {
-    @include vw(padding, 20px 20px 20px 20px);
+    @include vw(padding, 40px 0 20px 20px);
 
     @media screen and (max-width: 600px) {
       &.three-or-more {
@@ -118,29 +118,25 @@
         }
         height: 100%;
         @include boxSizing(border-box);
-        background-color: $color-light-beige;
-        border: 1px solid $color-light-brown;
+        background-color: $color-bg2;
+        border: 1px solid $color-line;
         border-left: 0;
         text-align: center;
         &:first-child {
-          border-left: 1px solid $color-light-brown;
+          border-left: 1px solid $color-line;
         }
 
         a {
           display: block;
           font-weight: 400;
-          @include vw(font-size, 15px);
-          color: #504b42;
+          @include vw(font-size, 14px);
+          color: $color-maintext;
         }
 
         &.active {
           background-color: $color-white;
           border-bottom: 0;
-
-          a {
-            color: $color-black;
-            font-weight: 400;
-          }
+         
         }
       }
     }
@@ -207,10 +203,8 @@
   }
 
   h3 {
-    //font-weight:600;
-    //color:$color-brown;
-    color: $color-black;
-    font-weight: 300;
+    color: $color-maintext;
+    font-weight: 400;
     @include vw(font-size, 16px);
     @include vw(line-height, 27.2px);
     @include vw(margin-bottom, 8px);
@@ -940,23 +934,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include vw(height, 38px);
+    @include vw(height, 40px);
     @include vw(padding, 0 16px);
     font-weight: 400;
     @include vw(font-size, 13px);
-    color: $color-black;
+    color: $color-maintext;
     @include boxSizing(border-box);
-    border: 1px solid $color-light-brown;
+    border: 1px solid $color-line;
     background-color: $color-white;
     @include vw(border-radius, 2px);
     strong {
       font-weight: 600;
     }
 
+    &.btn-blue {
+      background-color: $color-blue2;
+      color: $color-white;
+      border-color: $color-blue2;
+    }
+
 	&.btn-black {
 		background-color: $color-black;
 		color: $color-white;
-		border-color: $color-black
+		border-color: $color-black;
 	  }
 
     &.btn-brown {

@@ -1,0 +1,248 @@
+#wrap{
+	.section-exam-list{
+		.exam-list{
+			@include vw(padding, 24px 0);
+			display:flex;
+			justify-content: space-between;
+			border-bottom: 1px solid $color-line;
+			.info-box{
+				.subject{
+					font-weight: 400;
+					@include vw(font-size, 16px);
+					@include vw(line-height, 27.2px);
+					color:$color-maintext;
+				}
+				.period{
+					dl{
+						display:flex;
+						@include vw(margin-top, 8px);
+						dt,dd{
+							@include vw(font-size, 13px);
+							@include vw(line-height, 22.1px);
+							font-weight: 400;
+						}
+						dt{
+							color:$color-subtext2;
+						}
+						dd{
+							@include vw(margin-left, 8px);
+							color:$color-subtext1;
+						}
+					}
+				}
+			}
+			.action{}
+		}
+	}
+
+	.section-exam-before{
+		@include vw(padding-top, 40px);
+		.info-box{
+			background-color:$color-bg2;
+			@include vw(padding, 48px 32px 36px);
+			.info-list{
+				p{
+					color:$color-black;
+					@include vw(font-size, 16px);
+					font-weight: 400;
+					@include vw(line-height, 27.2px);
+					@include vw(margin-bottom, 16px);
+					@include vw(padding-bottom, 16px);
+					border-bottom:1px solid $color-line;
+					&:last-child{
+						margin-bottom:0;
+					}
+
+					span{
+						display:inline-block;
+						@include vw(margin-left, 8px);
+					}
+				}
+			}
+			.info-text{
+				@include vw(margin-top, 48px);
+				color: $color-red;
+				@include vw(font-size, 14px);
+				font-weight: 400;
+				@include vw(line-height, 23.8px);
+			}
+		}
+
+		.action-box{
+			@include vw(margin-top, 40px);
+			a{
+				@include vw(margin-top, 16px);
+				&:first-child{
+					margin-top:0;
+				}
+			}
+		}
+	}
+
+	.section-exam-after{
+		@include vw(padding-top, 40px);
+		.text-box{
+			color:$color-maintext;
+			@include vw(font-size, 16px);
+			font-weight: 400;
+			@include vw(line-height, 27.2px);
+		}
+
+		.timer-box{
+			@include vw(margin-top, 8px);
+			color:$color-blue;
+			@include vw(font-size, 16px);
+			font-weight: 400;
+			@include vw(line-height, 27.2px);
+			span{
+				display:inline-block;
+				@include vw(margin-left, 8px);
+			}
+		}
+		.action-box{
+			@include vw(margin-top, 40px);
+		}
+	}
+
+	.exam-no{
+		position:relative;
+		display:inline-block;
+		@include vw(margin-right, 4px);
+		text-align:center;
+		@include vw(width, 24px);
+
+		&:after,&:before{
+			content:'';
+			display:block;
+			position:absolute;
+			@include vw(left, -2px);
+			@include vw(top, -2px);
+			background-size:cover;
+			background-repeat:no-repeat;
+			@include vw(width, 28px);
+			@include vw(height, 28px);
+		}
+
+		&.answer{
+			&:before{background-image:url("../images/exam_answer.svg");}
+		}
+		&.correct{
+			&:after{background-image:url("../images/exam_correct.svg");}
+		}
+		&.wrong{
+			&:after{background-image:url("../images/exam_wrong.svg");}
+		}
+
+	}
+
+	.exam-text{
+		display:inline-block;
+		@include vw(width,307px);
+		img{width:100%;}
+	}
+
+	.section-exam-problem{
+		@include vw(padding,40px 0 0);
+		.wrap{
+			@include vw(width,335px);
+			margin:0 auto;
+			padding:0;
+		}
+		.exam-question{
+			font-weight: 400;
+			@include vw(font-size, 16px);
+			@include vw(line-height, 27.2px);
+			color:$color-maintext;
+			@include vw(margin-bottom, 20px);
+		}
+
+		.exam-paper{
+			@include vw(width,335px);
+			margin:0 auto;
+			img{width:100%;}
+		}
+
+		.exam-list{
+			
+			@include vw(margin-top, 20px);
+			li{
+				display:flex;
+				@include vw(margin-top, 16px);
+				&:first-child{margin-top:0;}
+
+				font-weight:300;
+				@include vw(font-size, 20px);
+				color:$color-maintext;
+
+
+			}
+		}
+
+		.exam-explanation{
+			@include vw(margin-top,20px);
+			.exam-title{	
+				font-weight: 600;
+				@include vw(font-size, 16px);
+				@include vw(line-height, 27.2px);
+				color:$color-blue;
+				@include vw(margin-bottom,10px);
+			}
+
+			.exam-paper{
+				@include boxSizing(border-box);
+				@include vw(padding,20px);
+				border:2px solid $color-blue;
+			}
+		}
+	}
+
+	.section-exam-action{
+		@include vw(margin-top,100px);
+		@include vw(padding, 16px 0);
+		border-top:1px solid $color-line;
+		.wrap{
+			display:flex;
+			justify-content: space-between;
+			align-items:center;
+		}
+		.action-box{
+			display:flex;
+			justify-content: space-between;
+			align-items:center;
+			@include vw(height, 40px);
+			.exam-btn{
+				color: $color-maintext;
+				@include vw(font-size, 14px);
+				font-weight: 400;
+				@include vw(line-height, 23.8px);
+				@include vw(padding, 8px 12px);
+				@include vw(margin-left, 20px);
+				&:first-child{margin-left:0;}
+				&.exam-prev{
+					
+					@include arrow(left, 8px, 8px, 1px, $color-subtext2);
+					&:before{
+						@include vw(left, -4px);
+					}
+				}
+				&.exam-next{
+					@include arrow(right, 8px, 8px, 1px, $color-subtext2);
+					&:before{
+						@include vw(right, -4px);
+					}
+				}
+
+				&.disabled{
+					color:$color-subtext3;
+					&.exam-prev,&.exam-next{
+						border-color:$color-subtext3;
+					}
+				}
+			}
+
+		}
+		.action{
+			margin-left:auto;
+		}
+	}
+}

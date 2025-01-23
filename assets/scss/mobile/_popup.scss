@@ -1133,10 +1133,10 @@
 				@include vw(width, 73px);
 				@include vw(height, 40px);
 				color: $color-white;
-				background-color: $color-brown;
+				background-color: $color-blue2;
 				@include vw(margin, 0 4px);
 				&.popup-cancel {
-					background-color: $color-light-gray;
+					background-color: $color-subtext3;
 				}
 			}
 		}
@@ -1223,7 +1223,7 @@
 		.popup-wrap {
 			@include vw(border-radius, 8px);
 			@include vw(width, 335px);
-			@include vw(padding, 36px);
+			@include vw(padding, 36px 24px);
 			@include boxSizing(border-box);
 			max-width: calc(100vw - 40px);
 		}
@@ -1232,7 +1232,7 @@
 			p {
 				font-size: 16px;
 				text-align: center;
-				color: $color-black;
+				color: $color-maintext;
 			}
 		}
 	}
@@ -1298,5 +1298,92 @@
 			@include vw(margin-top, 60px);
 		}
 
+	}
+
+
+	/* 모의고사 팝업 */
+	#popupExamCheck{
+		h3{
+			@include vw(margin-bottom, 20px);
+		}
+
+		.answer-check-box{
+			table{
+				width:100%;
+				border:1px solid $color-line;
+				border-left:0;
+				border-right:0;
+
+				tr{
+					th,td{}
+					th{
+						@include vw(width,44px);
+						background-color:$color-bg2;
+						color:$color-maintext;
+						font-weight:300;
+						@include vw(font-size,13px);
+					}
+					td{
+						width:auto;
+						@include vw(padding,8px 20px);
+						border-left:1px solid $color-line;
+						.check-list{
+							display:flex;
+							>div{
+								display:flex;
+								align-items: center;
+								justify-content: center;
+								@include vw(width,30px);
+								@include vw(height,30px);
+								@include vw(margin-left,25px);
+								&:first-child{margin-left:0;}
+								span{
+									@include boxSizing(border-box);
+									@include vw(font-size,13px);
+									font-weight: 500;
+									@include vw(line-height, 20.8px);
+									color:$color-subtext2;
+						
+	
+									display: flex;
+									@include vw(width,15px);
+									@include vw(height,23px);
+									@include vw(padding, 0px 2px);
+									justify-content: center;
+									align-items: center;
+									flex-shrink: 0;
+									border-radius: 999px;
+									border: 1px solid $color-subtext2;
+									background: $color-white;
+	
+								}
+								&.active{
+									span{
+										color:$color-white;
+										background-color:$color-maintext;
+										border-color:$color-maintext;
+									}
+								}
+							}
+
+						}
+					}
+
+					&:first-child{
+						td{
+							@include vw(padding-top,16px);
+						}
+					}
+					&:last-child{
+						td{
+							@include vw(padding-bottom,16px);
+						}
+					}
+				}
+			}
+		}
+		.action{
+			@include vw(margin-top, 40px);
+		}
 	}
 }
