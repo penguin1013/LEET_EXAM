@@ -11,6 +11,10 @@
 @import "mobile/popup"; // 팝업
 @import "mobile/common"; // 공통
 @import "mobile/layout"; // 웹
+
+@import "mobile/error"; // 에러
+@import "mobile/exam"; // 시험응시
+
 // @import "mobile/search"; // 검색
 @import "mobile/list"; // 리스트 공통
 @import "mobile/lecture"; // 강좌/교재
@@ -23,7 +27,6 @@
 @import "mobile/member"; // 통합계정
 // @import "mobile/player"; // 플레이어
 @import "mobile/main"; // 메인
-@import "mobile/error"; // 에러
 
 @import "mobile/pr"; // pr
 @import "mobile/report"; // 성적조회
@@ -34,3 +37,5 @@
 
 @import "mobile/program"; // 단과연합
 @import "mobile/promotion"; // 프로모션
+
+
