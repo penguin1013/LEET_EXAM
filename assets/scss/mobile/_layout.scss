@@ -110,6 +110,13 @@
 		> a {
 			@include vw(margin-left, 6px);
 		}
+
+
+		.btn-link{
+			color:#333;
+			@include vw(font-size, 14px);
+			font-weight:400;
+		}
 	}
 }
 
@@ -156,6 +163,15 @@
 				strong {
 					@include vw(padding-right, 30px);
 					@include arrow(right, 6px, 6px, 1px, $color-black);
+				}
+			}
+		}
+
+		.login-info{
+			a{
+				@include vw(margin-left, 16px);
+				span {
+					border-bottom: none;
 				}
 			}
 		}
@@ -619,10 +635,28 @@
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				@include vw(right, 14px);
+				@include vw(right, 20px);
 			}
 
 			h2 {
+				font-size:0;
+				.timer{
+					
+					display:inline-block;
+					color:$color-blue;
+					font-weight:600;
+					@include vw(font-size, 18px);
+				}
+				.dot{
+					position:relative;
+					@include vw(top, 12px);
+					@include vw(margin,0 8px);display:inline-block;
+					background-color:$color-subtext3;
+					@include vw(width, 3px);
+					@include vw(height, 3px);
+					border-radius:50%;
+					vertical-align:top;
+				}
 				a {
 					color: $color-black;
 					font-weight: 600;
@@ -690,109 +724,106 @@
 
 #footer {
 	background-color: $color-dark-black;
-	.footer-top {
-		//border-top:1px solid $color-light-brown;
-		@include vw(padding, 24px 0 40px);
+	.wrap{
+		@include vw(padding, 24px);
+	}
 
-		.footer-list {
-			display: flex;
-			align-items: center;
-			li {
-				a {
-					font-weight: 400;
-					color: rgba(221, 221, 221, 1);
-					position: relative;
-					display: inline-block;
-					@include vw(font-size, 13px);
-					@include vw(padding-right, 16px);
-					@include vw(margin-right, 16px);
-					strong {
-						font-weight: 600;
-					}
-					&:after {
-						content: '';
-						width: 1px;
-						height: 12px;
-						background-color: #777;
-						position: absolute;
-						right: 0;
-						top: 50%;
-						margin-top: -6px;
-					}
+	.footer-info{
+		.tel{
+			color: $color-white;
+			@include vw(font-size, 14px);
+			font-weight: 600;
+			@include vw(line-height, 21px);
+		}
+		.time{
+			color: $color-subtext2;
+			@include vw(font-size, 13px);
+			font-weight: 400;
+			@include vw(line-height, 19.5px);
+			@include vw(margin-top, 4px);
+		}
+	}
+
+	.footer-list {
+		display: flex;
+		align-items: center;
+		@include vw(padding, 20px 0);
+		li {
+			a {
+				font-weight: 400;
+				color: $color-subtext2;
+				position: relative;
+				display: inline-block;
+				@include vw(font-size, 13px);
+				@include vw(padding-right, 16px);
+				@include vw(margin-right, 16px);
+				strong {
+					font-weight: 600;
+					color:$color-white;
 				}
-				&:last-child {
-					a {
-						padding-right: 0;
-						margin-right: 0;
-						&:after {
-							display: none;
-						}
+				&:after {
+					content: '';
+					width: 1px;
+					height: 12px;
+					background-color: #555;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -6px;
+				}
+			}
+			&:last-child {
+				a {
+					padding-right: 0;
+					margin-right: 0;
+					&:after {
+						display: none;
 					}
 				}
 			}
 		}
+	}
 
-		.sns-list {
-			@include vw(margin-top, 24px);
-			display: flex;
-			a {
+	.company-info {
+		p {
+			color: #888;
+			@include vw(font-size, 10px);
+			font-weight: 400;
+			@include vw(line-height, 17px);
+			@include vw(margin-top, 8px);
+			&:first-child {
+				margin-top: 0;
+			}
+
+			strong {
 				display: inline-block;
 				@include vw(margin-right, 8px);
 			}
-		}
-	}
-
-	.footer-bottom {
-		@include vw(padding, 0 0 32px);
-
-		.footer-site {
-			@include vw(width, 160px);
-			.select {
-				width: 100%;
-			}
-		}
-
-		.company-info {
-			@include vw(margin-top, 12px);
-			p {
-				color: $color-777;
-				@include vw(font-size, 10px);
-				font-weight: 400;
-				@include vw(line-height, 13.6px);
-				@include vw(margin-top, 8px);
-				&:first-child {
-					margin-top: 0;
+			span {
+				position: relative;
+				display: inline-block;
+				@include vw(padding-right, 8px);
+				@include vw(margin-right, 4px);
+				&:after {
+					content: '';
+					width: 1px;
+					height: 12px;
+					background-color: $color-777;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -6px;
 				}
 
-				strong {
-					display: inline-block;
-					@include vw(margin-right, 8px);
-				}
-				span {
-					position: relative;
-					display: inline-block;
-					@include vw(padding-right, 8px);
-					@include vw(margin-right, 4px);
+				&:last-child {
+					padding-right: 0;
+					margin-right: 0;
 					&:after {
-						content: '';
-						width: 1px;
-						height: 12px;
-						background-color: $color-777;
-						position: absolute;
-						right: 0;
-						top: 50%;
-						margin-top: -6px;
-					}
-
-					&:last-child {
-						padding-right: 0;
-						margin-right: 0;
-						&:after {
-							display: none;
-						}
+						display: none;
 					}
 				}
 			}
 		}
 	}
+
 }
