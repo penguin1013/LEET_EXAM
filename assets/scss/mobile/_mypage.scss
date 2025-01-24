@@ -469,22 +469,7 @@
 		@include vw(padding-top, 32px);
 	}
 
-	.section-password{
-		@include vw(padding-top, 80px);
-		.text-box{
-			text-align:center;
-			p{}
-		}
-		.password-input-box{
-			@include vw(width, 232px);
-			margin:0 auto;
-			@include vw(margin-top, 40px);
-			.action{
-				@include vw(margin-top, 40px);
-				
-			}
-		}
-	}
+
 	
 	.section-mypage-info{
 		@include vw(padding-bottom,32px);
@@ -530,6 +515,18 @@
 
 		.checkbox-box{
 			.form-control{width:50%;}
+		}
+	}
+
+
+	.section-password{
+		@include vw(padding-top, 40px);
+		.text-box{
+			text-align:center;
+			p{}
+		}
+		.password-box{
+			@include vw(margin-top, 24px);
 		}
 	}
 

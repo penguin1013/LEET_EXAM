@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>상상로스쿨</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="상상로스쿨">
-    <meta property="og:image" content="../../../assets/images/og.png">
-    <meta property="og:description" content="LEET에 대한 가장 앞선 생각, 상상로스쿨에서 시작합니다.">
-    <meta name="google-site-verification" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0" />
-    <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-    <meta name="keyword" content="상상로스쿨">
-    <meta name="title" content="상상로스쿨">
-    <meta name="description" content="LEET에 대한 가장 앞선 생각, 상상로스쿨에서 시작합니다.">
-    <meta property="WT.ti" content="">
-    <meta name="DCS.dcsuri" content="">
-    <meta name="robots" content="index, follow">
+	<meta charset="UTF-8">
+	<title>시대인재 LEET</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="시대인재 LEET">
+	<meta name="keyword" content="시대인재리트, 시대인재LEET, 시대인재로스쿨, 하이컨시, 시대인재, 상상로스쿨">
+	<meta name="description" content="시대인재 LEET가 새로운 문을 엽니다. 비교불가의  Shortcut 방법론">
+	<meta property="og:title" content="시대인재 LEET">
+	<meta property="og:image" content="/resources/assets/images/og.png">
+	<meta property="og:description" content="시대인재 LEET가 새로운 문을 엽니다. 비교불가의  Shortcut 방법론">
+	<link rel="shortcut icon" href="/favicon.png">
+	<meta property="WT.ti" content="">
+	<meta name="DCS.dcsuri" content="">
+	<meta name="robots" content="index, follow">
+	<meta name="google-site-verification" content="k9pXJdTTGa9kGsglRZn99eOpnYLI5CO5Mhv6VtpPEDo">
+	<meta name="naver-site-verification" content="d96554ee4a09e7b35e514df02b06c0e6de6920c5">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, height=device-height, maximum-scale=1.0">
 
-	<link rel="stylesheet" href="../../../assets/libs/slick/slick.css" />
-	<link rel="stylesheet" href="../../../assets/css/mobile.css" />
+	<link rel="stylesheet" href="../../assets/libs/slick/slick.css" />
+	<link rel="stylesheet" href="../../assets/css/mobile.css" />
 
-	<script src="../../../assets/libs/jquery/jquery-3.7.1.min.js"></script>
-	<script src="../../../assets/libs/slick/slick-1.6.0.min.js"></script>
-	<script src="../../../assets/libs/masonry/masonry.pkgd.min.js"></script>
+	<script src="../../assets/libs/jquery/jquery-3.7.1.min.js"></script>
+	<script src="../../assets/libs/slick/slick-1.6.0.min.js"></script>
 </head>
 <body>
-
 <div id="wrap">
 	<div id="container">
-		<div id="contents" class="">
+		<div id="contents">
 			<div class="section-header">
 				<div class="header-title">
-					<a href="javascript:;" class="btn-back"><img src="../../../assets/images/mobile/btn_back_large.svg" alt="back" /></a>
-					<h2><a href="javascript:;">개인정보 수정</a></h2>
+					<a href="javascript:;" class="btn-back"><img src="../../assets/images/btn_back_large.svg" alt="back" /></a>
+					<h2 class="small"><a href="javascript:;">회원정보 수정</a></h2>
 				</div>
 			</div>
 
+			<div class="hr"></div>
 			<div class="section-mypage-info">
-				<div class="holder">
-					<h4>기본 정보</h4>
+				<div class="wrap">
 					<div class="lecture-data-input">
 						<dl>
-							<dt>이메일 ID</dt>
+							<dt>이메일</dt>
 							<dd>
 								<div class="form-control">
 									<input type="text" class="text disabled" disabled placeholder="" value="sangsang@naver.com" />
@@ -245,10 +244,9 @@
 							</dd>
 						</dl>
 					</div>
-
 				</div>
 
-				<div class="hr"></div>
+				
 				<div class="holder">
 					<h4>선택 항목</h4>
 					<div class="lecture-data-input">
@@ -413,16 +411,32 @@
 						</dl>
 
 					</div>
+
+					<div class="action">
+						<a href="javascript:;" class="btn btn-blue full large"><strong>수정완료</strong></a>
+					</div>
 				</div>
 			</div>
 
-			<div class="section-action">
-				<a href="javascript:;" class="btn btn-brown full large"><strong>수정</strong></a>
-			</div>
+			
 		</div>
 	</div>
 
 	<!-- 팝업 -->
+	<div class="popup popup-alert" id="popupAlert2">
+		<div class="popup-wrap">
+			<div class="popup-text">
+				<p>
+					회원탈퇴를 하시면 시대인재 LEET를 포함한 관련 사이트 이용이 불가합니다. <br/>
+					탈퇴하시겠습니까?
+				</p>
+			</div>
+			<div class="popup-action">
+				<a href="javascript:popupClose('#popupAlert2');" class="popup-cancel">취소</a>
+				<a href="javascript:popupClose('#popupAlert2');">확인</a>
+			</div>
+		</div>
+	</div>
 
 
 </div>

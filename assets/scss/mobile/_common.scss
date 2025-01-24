@@ -383,8 +383,9 @@
     @include vw(font-size, 14px);
     font-weight: 400;
     @include vw(line-height, 23.8px);
+    color: $color-maintext;
     p {
-      color: $color-black;
+      color: $color-maintext;
       @include vw(font-size, 13px);
       font-weight: 400;
       @include vw(line-height, 22.1px);
@@ -504,18 +505,18 @@
       width: 100%;
       @include vw(padding, 8px 8px 8px 16px);
       @include vw(font-size, 14px);
-      border: 1px solid $color-light-brown;
+      border: 1px solid $color-line;
       background: $color-white;
       @include boxSizing(border-box);
-      color: $color-black;
+      color: $color-maintext;
       @include vw(height, 48px);
       &::placeholder {
-        color: $color-light-gray;
+        color: $color-subtext3;
         @include vw(font-size, 14px);
       }
       &.disabled {
-        background-color: $color-light-beige !important;
-        color: $color-gray;
+        background-color: $color-bg2 !important;
+        color: $color-subtext2;
       }
 
       &.small {
@@ -1111,7 +1112,7 @@
     &.btn-file {
       position: relative;
       display: inline-block;
-      background: $color-light-beige;
+      background: $color-bg2;
       @include boxSizing(border-box);
       width: 100%;
       @include vw(height, 48px);
@@ -1220,6 +1221,7 @@
   }
 
   .section-action {
+    position:absolute;left:0;right:0;bottom:0;
     @include vw(padding, 20px 20px);
     display: flex;
     justify-content: center;
@@ -1261,12 +1263,13 @@
     p {
       @include vw(font-size, 14px);
       @include vw(line-height, 23.8px);
-      color: $color-gray;
+      color: $color-maintext;
       font-weight: 400;
+      text-align:left;
       strong {
         display: block;
         @include vw(margin-bottom, 4px);
-        color: $color-black;
+        color: $color-maintext;
         font-weight: 600;
         @include vw(font-size, 16px);
         @include vw(line-height, 27.2px);

@@ -4713,6 +4713,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   font-size: 3.73333vw;
   font-weight: 400;
   line-height: 6.34667vw;
+  color: #333;
 }
 
 @media screen and (min-width: 375px) {
@@ -4744,7 +4745,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .nodata-box p {
-  color: #2C2923;
+  color: #333;
   font-size: 3.46667vw;
   font-weight: 400;
   line-height: 5.89333vw;
@@ -5006,11 +5007,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   width: 100%;
   padding: 2.13333vw 2.13333vw 2.13333vw 4.26667vw;
   font-size: 3.73333vw;
-  border: 1px solid #E4DED3;
+  border: 1px solid #ddd;
   background: #FFFFFF;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: #2C2923;
+  color: #333;
   height: 12.8vw;
 }
 
@@ -5033,22 +5034,22 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .form-control .text::-webkit-input-placeholder {
-  color: #BEBEBC;
+  color: #BCBCBC;
   font-size: 3.73333vw;
 }
 
 #wrap .form-control .text:-ms-input-placeholder {
-  color: #BEBEBC;
+  color: #BCBCBC;
   font-size: 3.73333vw;
 }
 
 #wrap .form-control .text::-ms-input-placeholder {
-  color: #BEBEBC;
+  color: #BCBCBC;
   font-size: 3.73333vw;
 }
 
 #wrap .form-control .text::placeholder {
-  color: #BEBEBC;
+  color: #BCBCBC;
   font-size: 3.73333vw;
 }
 
@@ -5068,8 +5069,8 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .form-control .text.disabled {
-  background-color: #FBFAF6 !important;
-  color: #7A746A;
+  background-color: #f8f8f8 !important;
+  color: #959595;
 }
 
 #wrap .form-control .text.small {
@@ -6393,7 +6394,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .btn.btn-file {
   position: relative;
   display: inline-block;
-  background: #FBFAF6;
+  background: #f8f8f8;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -6609,6 +6610,10 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-action {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 5.33333vw 5.33333vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6689,8 +6694,9 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .text-box p {
   font-size: 3.73333vw;
   line-height: 6.34667vw;
-  color: #7A746A;
+  color: #333;
   font-weight: 400;
+  text-align: left;
 }
 
 @media screen and (min-width: 375px) {
@@ -6708,7 +6714,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .text-box p strong {
   display: block;
   margin-bottom: 1.06667vw;
-  color: #2C2923;
+  color: #333;
   font-weight: 600;
   font-size: 4.26667vw;
   line-height: 7.25333vw;
@@ -11301,18 +11307,14 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
-#wrap .lecture-data-list {
-  border-top: 1px solid #E4DED3;
-}
-
 #wrap .lecture-data-list .list {
-  padding: 6.4vw 0;
-  border-bottom: 1px solid #E4DED3;
+  padding: 5.33333vw 0;
+  border-bottom: 1px solid #ddd;
 }
 
 @media screen and (min-width: 375px) {
   #wrap .lecture-data-list .list {
-    padding: 24px 0;
+    padding: 20px 0;
   }
 }
 
@@ -11460,7 +11462,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .lecture-data-list .list .desc-box .t-desc .desc-title {
-  color: #2C2923;
+  color: #333;
   font-weight: 600;
   font-size: 3.73333vw;
   line-height: 6.34667vw;
@@ -11488,6 +11490,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .lecture-data-list .list .desc-box .t-desc .desc-title a {
   display: block;
+  color: #333;
 }
 
 #wrap .lecture-data-list .list .desc-box .t-desc .desc-title strong {
@@ -11555,25 +11558,25 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .lecture-data-list .list .desc-box .t-desc .desc-text p {
-  font-size: 3.2vw;
+  font-size: 3.46667vw;
   color: #2C2923;
-  line-height: 5.44vw;
+  line-height: 5.89333vw;
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  color: #7A746A;
+  color: #666;
   font-weight: 400;
 }
 
 @media screen and (min-width: 375px) {
   #wrap .lecture-data-list .list .desc-box .t-desc .desc-text p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 @media screen and (min-width: 375px) {
   #wrap .lecture-data-list .list .desc-box .t-desc .desc-text p {
-    line-height: 20.4px;
+    line-height: 22.1px;
   }
 }
 
@@ -15636,48 +15639,6 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
-#wrap .section-password {
-  padding-top: 21.33333vw;
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-password {
-    padding-top: 80px;
-  }
-}
-
-#wrap .section-password .text-box {
-  text-align: center;
-}
-
-#wrap .section-password .password-input-box {
-  width: 61.86667vw;
-  margin: 0 auto;
-  margin-top: 10.66667vw;
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-password .password-input-box {
-    width: 232px;
-  }
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-password .password-input-box {
-    margin-top: 40px;
-  }
-}
-
-#wrap .section-password .password-input-box .action {
-  margin-top: 10.66667vw;
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-password .password-input-box .action {
-    margin-top: 40px;
-  }
-}
-
 #wrap .section-mypage-info {
   padding-bottom: 8.53333vw;
 }
@@ -15792,6 +15753,30 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .section-mypage-info .checkbox-box .form-control {
   width: 50%;
+}
+
+#wrap .section-password {
+  padding-top: 10.66667vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-password {
+    padding-top: 40px;
+  }
+}
+
+#wrap .section-password .text-box {
+  text-align: center;
+}
+
+#wrap .section-password .password-box {
+  margin-top: 6.4vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-password .password-box {
+    margin-top: 24px;
+  }
 }
 
 #wrap .member .tab-menu {

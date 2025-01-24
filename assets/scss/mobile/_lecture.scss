@@ -342,10 +342,10 @@
 	}
 
 	.lecture-data-list {
-		border-top: 1px solid $color-light-brown;
+		//border-top: 1px solid $color-light-brown;
 		.list {
-			@include vw(padding, 24px 0);
-			border-bottom: 1px solid $color-light-brown;
+			@include vw(padding, 20px 0);
+			border-bottom: 1px solid $color-line;
 			.desc-box {
 				position: relative;
 				display: flex;
@@ -408,13 +408,14 @@
 					}
 
 					.desc-title {
-						color: $color-black;
+						color: $color-maintext;
 						font-weight: 600;
 						@include vw(font-size, 14px);
 						@include vw(line-height, 23.8px);
 						@include multipleEllipsis(2);
 						a {
 							display: block;
+							color: $color-maintext;
 						}
 
 						strong {
@@ -437,13 +438,13 @@
 						color: $color-black;
 						@include vw(line-height, 20.4px);
 						p {
-							@include vw(font-size, 12px);
+							@include vw(font-size, 13px);
 							color: $color-black;
-							@include vw(line-height, 20.4px);
+							@include vw(line-height, 22.1px);
 							position: relative;
 							display: inline-block;
 							vertical-align: middle;
-							color: $color-gray;
+							color: $color-subtext1;
 							font-weight: 400;
 							span {
 								display: inline-block;
