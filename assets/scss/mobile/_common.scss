@@ -14,6 +14,10 @@
     padding-top: 0 !important;
   }
 
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+
   .underline {
     text-decoration: underline;
   }
@@ -1051,6 +1055,10 @@
 
 	
 
+    &.half {
+      width: 50%;
+    }
+    
     &.full {
       width: 100%;
     }
@@ -1233,22 +1241,22 @@
   }
 
   .text-box {
-	dl{
-		@include vw(margin-top, 32px);
-		&:first-child{margin-top:0;}
-		dt,dd{
-			@include vw(font-size, 14px);
-			@include vw(line-height, 23.8px);
-			color: $color-maintext;
-			font-weight: 400;
-		}
-		dt{
-			@include vw(margin-bottom, 16px);
-		}
-		dd{
+    dl{
+      @include vw(margin-top, 32px);
+      &:first-child{margin-top:0;}
+      dt,dd{
+        @include vw(font-size, 14px);
+        @include vw(line-height, 23.8px);
+        color: $color-maintext;
+        font-weight: 400;
+      }
+      dt{
+        @include vw(margin-bottom, 16px);
+      }
+      dd{
 
-		}
-	}
+      }
+    }
 
     p {
       @include vw(font-size, 14px);
@@ -1263,6 +1271,15 @@
         @include vw(font-size, 16px);
         @include vw(line-height, 27.2px);
       }
+    }
+  }
+
+  .comment-box {
+    p {
+      @include vw(font-size, 16px);
+      @include vw(line-height, 27.2px);
+      color: $color-maintext;
+      font-weight: 400;
     }
   }
 
@@ -1287,6 +1304,7 @@
           font-weight: 400;
           @include vw(font-size, 14px);
           @include vw(line-height, 23.8px);
+
           .subject {
             display: block;
             @include vw(margin-bottom, 4px);

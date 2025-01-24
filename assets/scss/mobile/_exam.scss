@@ -7,9 +7,13 @@
 			border-bottom: 1px solid $color-line;
 			&.flex-none{
 				display:block;
+				.info-box{
+					width:100%;
+				}
 			}
 
 			.info-box{
+				width:75%;
 				.subject{
 					font-weight: 400;
 					@include vw(font-size, 16px);
@@ -64,7 +68,14 @@
 					display:flex;
 				}
 			}
+
+			.action{
+				@include vw(width, 81px);
+				@include vw(margin-left, 12px);
+			}
 		}
+
+		
 	}
 
 	.section-exam-before{
@@ -611,6 +622,69 @@
 						border:2px solid $color-blue;
 					}
 				}
+			}
+		}
+	}
+
+	.section-exam-toggle{
+		.toggle-box dl dd p{
+			@include vw(margin-top, 8px);
+			&:first-child{margin-top:0;}
+
+			@include vw(padding-left, 14px);
+			@include vw(text-indent, -14px);
+		}
+	}
+
+	.section-exam-view{
+		@include vw(padding-top, 40px);
+		.holder{
+			@include vw(width,335px);
+			margin:0 auto;
+			img{width:100%;}
+		}
+		
+		.exam-view{
+			@include vw(margin-top, 20px);
+			@include vw(padding, 32px 0);
+			border-top:1px solid $color-line;
+			border-bottom:1px solid $color-line;
+			dl{
+				display:flex;
+				@include vw(margin-top, 20px);
+				&:first-child{margin-top:0;}
+				dt,dd{
+					color:$color-maintext;
+					font-weight: 400;
+					@include vw(font-size, 13px);
+					@include vw(line-height, 22.1px);
+				}
+				dt{
+					@include vw(width, 64px);
+					font-weight: 600;
+				}
+				dd{
+					width:76%;@include vw(margin-left, 16px);
+					.action-box{
+						display:flex;
+						@include vw(margin-top, 8px);
+						.btn{
+							color:$color-subtext1;
+							@include vw(margin-right, 8px);
+							&.btn-blue{
+								color:$color-white;
+							}
+						}
+					}
+				}
+			}
+		}
+		.action{
+			@include vw(margin-top, 40px);
+			.btn{
+				//width:50%;
+				@include vw(margin-left, 8px);
+				&:first-child{margin-left:0;}
 			}
 		}
 	}
