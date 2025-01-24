@@ -77,7 +77,7 @@
 
 		.popup-cont {
 
-			@include vw(padding, 20px 20px 80px);
+			@include vw(padding, 32px 20px 80px);
 
 			p {
 				color: $color-black;
@@ -120,10 +120,13 @@
 			.heading {
 				@include vw(margin-bottom, 20px);
 				@include vw(font-size, 16px);
-				font-weight: 600;
+				font-weight: 400;
 				@include vw(line-height, 27.2px);
 				@include vw(padding-left, 20px);
 				@include vw(text-indent, -20px);
+				strong{
+					font-weight: 600;
+				}
 			}
 			.border-line {
 				@include vw(padding-bottom, 20px);
@@ -249,11 +252,6 @@
 			}
 		}
 
-
-		.search-input-box {
-			@include vw(margin-bottom, 16px);
-		}
-
 		.title-box {
 			color: $color-black;
 			@include vw(margin-bottom, 20px);
@@ -349,7 +347,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: 1002;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.7);
 		display: none;
 		&.show {
 			display: flex;
@@ -939,7 +937,7 @@
 		display: none;
 		justify-content: center;
 		align-items: center;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.7);
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -1076,12 +1074,14 @@
 					}
 				}
 			}
+
 			.heading {
 				@include vw(margin-bottom, 20px);
 				@include vw(font-size, 16px);
 				font-weight: 600;
 				line-height: 1;
 			}
+
 			.border-line {
 				@include vw(padding-bottom, 20px);
 				@include vw(margin-bottom, 40px);
@@ -1111,6 +1111,8 @@
 				font-weight: 600;
 			}
 		}
+
+	
 
 		.popup-scroll {
 			@include boxSizing(border-box);
@@ -1231,6 +1233,7 @@
 		.popup-text {
 			p {
 				font-size: 16px;
+				@include vw(line-height, 27.2px);
 				text-align: center;
 				color: $color-maintext;
 			}
@@ -1384,6 +1387,94 @@
 		}
 		.action{
 			@include vw(margin-top, 40px);
+		}
+	}
+
+	#popupOfflineCheck{
+
+		.popup-data-input{
+			dl{
+				@include vw(margin-top, 32px);
+				&:first-child{
+					@include vw(margin-top, 20px);
+				}
+
+				dt{
+					@include vw(width, 64px);
+					@include vw(margin-right, 16px);
+					text-align: left;
+					color: $color-black;
+					@include vw(font-size, 13px);
+					@include vw(line-height, 22.1px);
+					text-align: left;
+					font-weight: 400;
+					font-family: $font-pretendard;
+					@include boxSizing(border-box);
+					strong {
+						font-weight: 600;
+					}
+				}
+				dd{
+					color:$color-maintext;
+					@include vw(font-size, 14px);
+					@include vw(line-height, 23.8px);
+					text-align: left;
+					font-weight: 400;
+				}
+			}
+		}
+
+
+		.search-input-box {
+			@include vw(margin-top, 8px);
+			@include vw(margin-bottom, 8px);
+		}
+
+		.table-row{
+			@include vw(margin-top, 32px);
+			.form-control .fake-checkbox label{
+				padding-top:0;
+				@include vw(padding-left, 24px);
+			}
+			tr{
+				th,td{
+					&:first-child{
+						line-height:1;
+						@include vw(padding-left, 16px);
+					}
+					&:last-child{
+						@include vw(padding-right, 16px);
+					}
+				}
+			}
+		}
+
+
+		.action{
+			@include vw(margin-top, 40px);
+		}
+	}
+
+	#popupWrongNote{
+		
+		.wrong-list{
+			li{
+				@include vw(margin-top, 24px);
+				&:first-child{margin-top:0;}
+
+				a{
+					display:flex;
+					justify-content: space-between;
+					align-items:center;
+				}
+
+				p {
+					color: $color-maintext;
+					font-weight: 400;
+					@include vw(font-size, 16px);
+					@include vw(line-height, 24px);
+				  }
+			}
 		}
 	}
 }
