@@ -4988,9 +4988,15 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .form-control .select {
   display: inline-block;
   font-size: 0;
-  background: url("../images/icon_select_arrow.svg") no-repeat 99% center;
+  background: url("../images/icon_select_arrow.svg") no-repeat 95% center;
   background-size: 5.33333vw 5.33333vw;
   width: 100%;
+}
+
+@media screen and (min-width: 720px) {
+  #wrap .form-control .select {
+    background-position: 99% 0;
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -6703,10 +6709,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FFFFFF;
 }
 
 #wrap .section-action.fixed-bottom {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -13462,6 +13469,24 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   margin-right: 20px;
 }
 
+#wrap .member .section-member-content h3 {
+  margin: 0;
+}
+
+#wrap .member .section-member-content .form-text {
+  color: #333;
+}
+
+#wrap .member .section-member-content .lecture-data-input {
+  margin-top: 8.53333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .member .section-member-content .lecture-data-input {
+    margin-top: 32px;
+  }
+}
+
 #wrap .section-login-content {
   margin-top: 10.66667vw;
 }
@@ -13531,7 +13556,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-login-content .login-box .btn-login {
-  margin-top: 6.4vw;
+  margin-top: 10.66667vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13550,7 +13575,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 @media screen and (min-width: 375px) {
   #wrap .section-login-content .login-box .btn-login {
-    margin-top: 24px;
+    margin-top: 40px;
   }
 }
 
@@ -13766,6 +13791,16 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 @media screen and (min-width: 375px) {
   #wrap .section-member-content {
     padding: 24px 0;
+  }
+}
+
+#wrap .section-member-content h3 {
+  padding-top: 2.13333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-member-content h3 {
+    padding-top: 8px;
   }
 }
 
@@ -14092,7 +14127,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #2C2923;
+  background-color: #333;
   color: #FFFFFF;
   margin: 0 auto;
   font-size: 13px;
@@ -14100,28 +14135,70 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-join-title .join-step-list ul li p {
-  font-size: 13px;
-  line-height: 23.8px;
-  color: #2C2923;
-  font-weight: 400;
-  margin-top: 10px;
+  font-size: 3.46667vw;
+  line-height: 6.34667vw;
+  color: #333;
+  font-weight: 500;
+  margin-top: 2.66667vw;
   text-align: center;
 }
 
+@media screen and (min-width: 375px) {
+  #wrap .section-join-title .join-step-list ul li p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-join-title .join-step-list ul li p {
+    line-height: 23.8px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-join-title .join-step-list ul li p {
+    margin-top: 10px;
+  }
+}
+
 #wrap .section-join-title .join-step-list ul li.active .num {
-  background-color: #A07D3B;
+  background-color: #0E4B9E;
 }
 
 #wrap .section-join-title .join-step-list ul li.active p {
-  color: #A07D3B;
+  color: #0E4B9E;
 }
 
 #wrap .section-join-content {
-  margin-top: 32px;
+  margin-top: 8.53333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-join-content {
+    margin-top: 32px;
+  }
+}
+
+#wrap .section-join-content .btn-text {
+  border: none;
+  font-size: 3.73333vw;
+  line-height: 1;
+  color: #333;
+  font-weight: 400;
+  padding: 0;
+  height: auto;
+  border-radius: 0;
+  border-bottom: 1px solid #333;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-join-content .btn-text {
+    font-size: 14px;
+  }
 }
 
 #wrap .section-join-content__title {
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   font-size: 18px;
   font-weight: 600;
   color: #2c2923;
@@ -14554,12 +14631,14 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .section-join-content .join-result-box p {
   text-align: center;
+  color: #666;
   font-weight: 400;
   font-size: 14px;
   line-height: 27.2px;
 }
 
 #wrap .section-join-content .join-result-box p strong {
+  color: #333;
   display: block;
   font-size: 16px;
   font-weight: 600;
@@ -14569,11 +14648,16 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .section-join-content .join-result-box .action {
   margin-top: 40px;
-  gap: 12px;
 }
 
-#wrap .section-join-content .join-result-box .action .btn-brown {
-  width: 50%;
+#wrap .section-join-content .join-result-box .action .btn {
+  width: 32vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-join-content .join-result-box .action .btn {
+    width: 120px;
+  }
 }
 
 #wrap .section-join-content .radio-box {
@@ -14605,6 +14689,16 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .section-join-content .text-box p {
   color: #2C2923;
+}
+
+#wrap .section-member-input {
+  padding: 8.53333vw 0;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-member-input {
+    padding: 32px 0;
+  }
 }
 
 #wrap .section-notice-view {
