@@ -1,4 +1,5 @@
 #wrap{
+	/*
 	.btn-write{
 		position:fixed;z-index:10;
 		@include vw(bottom,32px);
@@ -439,27 +440,7 @@
 		}
 	}
 
-	.view-box{
-		border-top: 1px solid $color-light-brown;
-		@include vw(padding,16px 0);
-		@include vw(line-height, 23.8px);
-		@include vw(font-size, 14px);
-		font-weight: 400;
-		color:$color-black;
-	}
 
-	.file-box{
-		dl{
-			dt{
-				@include vw(margin-bottom, 16px);
-				font-weight:600;@include vw(font-size,13px);@include vw(line-height,22.1px);
-				color:$color-black;
-			}
-			dd{
-
-			}
-		}
-	}
 
 	.section-question{
 		@include vw(padding,24px 0 32px);
@@ -468,16 +449,86 @@
 	.section-answer{
 		@include vw(padding-top, 32px);
 	}
+		*/
 
 
 	
-	.section-mypage-info{
-		@include vw(padding-bottom,32px);
 
+
+
+	.section-mypage-info{
+		@include vw(padding-top,40px);
+
+		.btn-delete{
+			@include vw(margin-top,8px);
+		}
+
+		.mypage-info-box{
+			border: 1px solid $color-line;
+			@include vw(padding, 20px 20px);
+			dl{
+				display:flex;
+				@include vw(margin-top, 4px);
+				&:first-child{margin-top:0;}
+				dt,dd{
+					color: $color-maintext;
+					font-weight: 400;
+					@include vw(font-size, 14px);
+					@include vw(line-height, 23.8px);
+					
+				}
+				dt{@include vw(width, 94px);}
+				dd{@include vw(margin-left, 20px);}
+			}
+		}
+	}
+
+	.section-mypage-update{
 		.holder{
 			&:last-child{padding-bottom:0;}
 		}
-		
+
+		.lecture-data-input{
+			dl {
+				@include vw(margin-top, 32px);
+				dd{
+					&.email{
+						.input-box{
+							@include vw(margin-bottom, 8px);
+							.form-control{width:46%;}
+							.form-space{
+								color: $color-subtext3;
+								font-weight: 400;
+								@include vw(font-size, 14px);
+								@include vw(line-height, 23.8px);
+								width:8%;
+								text-align:center;
+							}
+						}
+					}
+
+					&.phone{
+						.input-box{
+							@include vw(margin-bottom, 8px);
+							.form-control{width:28%;}
+							.form-space{
+								color: $color-subtext3;
+								font-weight: 400;
+								@include vw(font-size, 14px);
+								@include vw(line-height, 23.8px);
+								width:8%;
+								text-align:center;
+							}
+						}
+					}
+
+					.notice{
+						@include vw(margin-top, 8px);
+					}
+				}
+			}
+		}
+/*
 		.lecture-data-input{
 			dl {
 				@include vw(margin-top, 32px);
@@ -516,14 +567,19 @@
 		.checkbox-box{
 			.form-control{width:50%;}
 		}
+			*/
 	}
 
+	.section-mypage-action{
+		@include vw(padding,20px 0);
+	}
+	
 
 	.section-password{
 		@include vw(padding-top, 40px);
 		.text-box{
-			text-align:center;
-			p{}
+
+			p{text-align:left;}
 		}
 		.password-box{
 			@include vw(margin-top, 24px);

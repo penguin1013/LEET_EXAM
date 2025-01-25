@@ -186,9 +186,6 @@
 		img{width:100%;}
 	}
 
-
-
-
 	.section-exam-problem{
 		@include vw(padding,40px 0 0);
 		.wrap{
@@ -664,7 +661,7 @@
 					font-weight: 600;
 				}
 				dd{
-					width:76%;@include vw(margin-left, 16px);
+					width:calc(100% - 80px);@include vw(margin-left, 16px);
 					.action-box{
 						display:flex;
 						@include vw(margin-top, 8px);
@@ -687,5 +684,12 @@
 				&:first-child{margin-left:0;}
 			}
 		}
+	}
+
+	.section-exam-line {
+		border-top: 1px solid $color-bg3;
+		background-color: $color-bg2;
+		@include vw(height, 10px);
+		  @include vw(margin-top, 32px);
 	}
 }

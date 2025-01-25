@@ -47,10 +47,19 @@
   }
 
   .hr {
-    border-top: 1px solid $color-bg3;
+    border-top: 1px solid $color-bg2;
     background-color: $color-bg2;
     @include vw(height, 10px);
-	@include vw(margin-top, 32px);
+  }
+
+
+
+  .space{
+    color: $color-subtext3;
+    font-weight: 400;
+    @include vw(font-size, 14px);
+    @include vw(line-height, 23.8px);
+    @include vw(margin,0 8px);
   }
 
   .border-line-box {
@@ -405,10 +414,10 @@
   }
 
   .form-text {
-    color: $color-gray;
+    color: $color-subtext3;
     font-weight: 400;
-    @include vw(font-size, 13px);
-    @include vw(line-height, 22.1px);
+    @include vw(font-size, 14px);
+    @include vw(line-height, 23.8px);
     @include vw(margin-top, 8px);
   }
 
@@ -456,6 +465,7 @@
   }
 
   .form-control {
+    position:relative;
     font-size: 0;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -1221,7 +1231,9 @@
   }
 
   .section-action {
-    position:absolute;left:0;right:0;bottom:0;
+    &.fixed-bottom{
+      position:absolute;left:0;right:0;bottom:0;
+    }
     @include vw(padding, 20px 20px);
     display: flex;
     justify-content: center;
@@ -1241,6 +1253,8 @@
       }
     }
   }
+
+
 
   .text-box {
     dl{
@@ -1265,7 +1279,7 @@
       @include vw(line-height, 23.8px);
       color: $color-maintext;
       font-weight: 400;
-      text-align:left;
+      text-align:center;
       strong {
         display: block;
         @include vw(margin-bottom, 4px);
