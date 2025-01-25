@@ -13095,11 +13095,18 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .section-mypage-info .mypage-info-box {
   border: 1px solid #ddd;
   padding: 5.33333vw 5.33333vw;
+  margin-bottom: 10.66667vw;
 }
 
 @media screen and (min-width: 375px) {
   #wrap .section-mypage-info .mypage-info-box {
     padding: 20px 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-mypage-info .mypage-info-box {
+    margin-bottom: 40px;
   }
 }
 

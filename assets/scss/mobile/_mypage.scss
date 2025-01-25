@@ -466,6 +466,7 @@
 		.mypage-info-box{
 			border: 1px solid $color-line;
 			@include vw(padding, 20px 20px);
+			@include vw(margin-bottom,40px);
 			dl{
 				display:flex;
 				@include vw(margin-top, 4px);
