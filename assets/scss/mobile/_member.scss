@@ -32,27 +32,7 @@
 			background-image: url('../images/mobile/ico_check.svg');
 		}
 	}
-	.timer-box {
-		position: relative;
-		display: flex;
-		align-items: center;
-		.form-control {
-			position: relative;
-			width: 100%;
-			.text {
-				padding-right: 160px;
-			}
-			.timer {
-				color: $color-brown;
-				font-weight: 600;
-				font-size: 14px;
-				position: absolute;
-				top: 50%;
-				right: 115px;
-				transform: translateY(-50%);
-			}
-		}
-	}
+
 	.agree-box {
 		height: 120px;
 		overflow-y: auto;
@@ -161,14 +141,46 @@
 				color: $color-white;
 				@include vw(height, 56px);
 				background-color: $color-black;
-				font-weight: 600;
+				font-weight: 500;
 				@include vw(font-size, 14px);
 			}
 
-			.info-box {
-				@include vw(padding-top, 24px);
+			.univ-login-box{
+				border-top:1px solid $color-line;
 				@include vw(margin-top, 60px);
-				border-top: 1px solid $color-light-brown;
+				@include vw(padding-top, 20px);
+				display:flex;
+				justify-content: space-between;
+				align-items: center;
+				.univ-login-text{
+					color: $color-maintext;
+					font-weight: 400;
+					@include vw(font-size, 14px);
+					@include vw(line-height, 23.8px);
+				}
+
+				.btn {
+					background-color: $color-bg3;
+					color: $color-maintext;
+					border-color: $color-line;
+				}
+			}
+
+			.link-box{
+				@include vw(margin-top, 4px);
+				background-color: $color-bg2;
+				@include vw(padding, 20px 40px);
+				@include vw(font-size, 13px);
+				@include vw(line-height, 22.1px);
+				color: $color-maintext;
+				font-weight: 400;
+				text-align:left;
+			}
+
+			.info-box {
+	
+				@include vw(margin-top, 40px);
+				
 				dl {
 					@include vw(margin-top, 20px);
 					text-align: left;
@@ -195,11 +207,7 @@
 				@include vw(margin-top, 20px);
 				.btn {
 					width: 50%;
-					border-color: $color-light-brown;
-					background-color: $color-light-brown2;
-					color: $color-black;
 					@include vw(margin-left, 12px);
-					font-weight: 600;
 					&:first-child {
 						margin-left: 0;
 					}
@@ -209,21 +217,20 @@
 	}
 
 	.section-member-info {
-		@include vw(padding-bottom, 24px);
-		.form-text {
-			@include vw(margin-top, 4px);
-		}
+		@include vw(padding, 24px 0);
+
 		.form-control {
 			@include vw(margin-top, 12px);
 		}
 	}
 
 	.section-member-content {
+		@include vw(padding, 24px 0);
 		.lecture-data-input {
 			dl {
 				@include vw(margin-top, 32px);
 				&:first-child {
-					@include vw(margin-top, 24px);
+					@include vw(margin-top, 0px);
 				}
 			}
 
@@ -298,6 +305,30 @@
 				}
 			}
 		}
+
+		.timer-box {
+			position: relative;
+			display: flex;
+			align-items: center;
+			width: calc(100% - 105px);
+			.form-control {
+				position: relative;
+				width: 100%;
+				.text {
+					@include vw(padding-right, 64px);
+				}
+				.timer {
+					color: $color-blue;
+					font-weight: 600;
+					font-size: 14px;
+					position: absolute;
+					top: 50%;
+					@include vw(right,12px);
+					transform: translateY(-50%);
+				}
+			}
+		}
+
 	}
 	.section-join-title {
 		margin-top: 40px;

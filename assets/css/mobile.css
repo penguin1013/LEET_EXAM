@@ -4016,6 +4016,18 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
+#wrap .hr-line {
+  border-top: 1px solid #ECECED;
+  background-color: #f8f8f8;
+  height: 2.66667vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .hr-line {
+    height: 10px;
+  }
+}
+
 #wrap .space {
   color: #BCBCBC;
   font-weight: 400;
@@ -4815,6 +4827,29 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 @media screen and (min-width: 375px) {
   #wrap .notice {
     line-height: 23.8px;
+  }
+}
+
+#wrap .notice strong {
+  font-weight: 600;
+}
+
+#wrap .form-notice {
+  color: #666;
+  font-weight: 400;
+  font-size: 3.46667vw;
+  line-height: 5.89333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .form-notice {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .form-notice {
+    line-height: 22.1px;
   }
 }
 
@@ -5945,6 +5980,37 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .input-box .input-text-end strong {
   font-weight: 600;
+}
+
+#wrap .input-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#wrap .input-btn-box .form-control {
+  width: calc(100% - 105px);
+}
+
+#wrap .input-btn-box .btn {
+  width: 28vw;
+  margin-left: 2.13333vw;
+  padding: 0;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .input-btn-box .btn {
+    width: 105px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .input-btn-box .btn {
+    margin-left: 8px;
+  }
 }
 
 #wrap .select-box {
@@ -13296,36 +13362,6 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   background-image: url("../images/mobile/ico_check.svg");
 }
 
-#wrap .member .timer-box {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#wrap .member .timer-box .form-control {
-  position: relative;
-  width: 100%;
-}
-
-#wrap .member .timer-box .form-control .text {
-  padding-right: 160px;
-}
-
-#wrap .member .timer-box .form-control .timer {
-  color: #A07D3B;
-  font-weight: 600;
-  font-size: 14px;
-  position: absolute;
-  top: 50%;
-  right: 115px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
 #wrap .member .agree-box {
   height: 120px;
   overflow-y: auto;
@@ -13507,7 +13543,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   color: #FFFFFF;
   height: 14.93333vw;
   background-color: #2C2923;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 3.73333vw;
 }
 
@@ -13529,21 +13565,100 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
-#wrap .section-login-content .login-box .info-box {
-  padding-top: 6.4vw;
+#wrap .section-login-content .login-box .univ-login-box {
+  border-top: 1px solid #ddd;
   margin-top: 16vw;
-  border-top: 1px solid #E4DED3;
+  padding-top: 5.33333vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 375px) {
-  #wrap .section-login-content .login-box .info-box {
-    padding-top: 24px;
+  #wrap .section-login-content .login-box .univ-login-box {
+    margin-top: 60px;
   }
 }
 
 @media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .univ-login-box {
+    padding-top: 20px;
+  }
+}
+
+#wrap .section-login-content .login-box .univ-login-box .univ-login-text {
+  color: #333;
+  font-weight: 400;
+  font-size: 3.73333vw;
+  line-height: 6.34667vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .univ-login-box .univ-login-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .univ-login-box .univ-login-text {
+    line-height: 23.8px;
+  }
+}
+
+#wrap .section-login-content .login-box .univ-login-box .btn {
+  background-color: #ECECED;
+  color: #333;
+  border-color: #ddd;
+}
+
+#wrap .section-login-content .login-box .link-box {
+  margin-top: 1.06667vw;
+  background-color: #f8f8f8;
+  padding: 5.33333vw 10.66667vw;
+  font-size: 3.46667vw;
+  line-height: 5.89333vw;
+  color: #333;
+  font-weight: 400;
+  text-align: left;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .link-box {
+    margin-top: 4px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .link-box {
+    padding: 20px 40px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .link-box {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-login-content .login-box .link-box {
+    line-height: 22.1px;
+  }
+}
+
+#wrap .section-login-content .login-box .info-box {
+  margin-top: 10.66667vw;
+}
+
+@media screen and (min-width: 375px) {
   #wrap .section-login-content .login-box .info-box {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 }
 
@@ -13610,11 +13725,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 #wrap .section-login-content .login-box .action .btn {
   width: 50%;
-  border-color: #E4DED3;
-  background-color: #F2EFE7;
-  color: #2C2923;
   margin-left: 3.2vw;
-  font-weight: 600;
 }
 
 @media screen and (min-width: 375px) {
@@ -13628,22 +13739,12 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-member-info {
-  padding-bottom: 6.4vw;
+  padding: 6.4vw 0;
 }
 
 @media screen and (min-width: 375px) {
   #wrap .section-member-info {
-    padding-bottom: 24px;
-  }
-}
-
-#wrap .section-member-info .form-text {
-  margin-top: 1.06667vw;
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-member-info .form-text {
-    margin-top: 4px;
+    padding: 24px 0;
   }
 }
 
@@ -13654,6 +13755,16 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 @media screen and (min-width: 375px) {
   #wrap .section-member-info .form-control {
     margin-top: 12px;
+  }
+}
+
+#wrap .section-member-content {
+  padding: 6.4vw 0;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-member-content {
+    padding: 24px 0;
   }
 }
 
@@ -13668,13 +13779,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-member-content .lecture-data-input dl:first-child {
-  margin-top: 6.4vw;
-}
-
-@media screen and (min-width: 375px) {
-  #wrap .section-member-content .lecture-data-input dl:first-child {
-    margin-top: 24px;
-  }
+  margin-top: 0px;
 }
 
 #wrap .section-member-content .lecture-data-input .input-box .input-text-start {
@@ -13857,6 +13962,49 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 @media screen and (min-width: 375px) {
   #wrap .section-member-content .search-result-box p strong {
     margin-left: 4px;
+  }
+}
+
+#wrap .section-member-content .timer-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 105px);
+}
+
+#wrap .section-member-content .timer-box .form-control {
+  position: relative;
+  width: 100%;
+}
+
+#wrap .section-member-content .timer-box .form-control .text {
+  padding-right: 17.06667vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-member-content .timer-box .form-control .text {
+    padding-right: 64px;
+  }
+}
+
+#wrap .section-member-content .timer-box .form-control .timer {
+  color: #0E4B9E;
+  font-weight: 600;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  right: 3.2vw;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-member-content .timer-box .form-control .timer {
+    right: 12px;
   }
 }
 

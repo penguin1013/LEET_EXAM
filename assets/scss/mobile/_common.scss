@@ -52,6 +52,12 @@
     @include vw(height, 10px);
   }
 
+  .hr-line {
+    border-top: 1px solid $color-bg3;
+		background-color: $color-bg2;
+		@include vw(height, 10px);
+  }
+
 
 
   .space{
@@ -407,10 +413,18 @@
 
   .notice {
     @include vw(margin-top, 16px);
-	@include vw(font-size, 14px);
-	font-weight: 400;
-	color: $color-subtext1;
-	@include vw(line-height, 23.8px);
+    @include vw(font-size, 14px);
+    font-weight: 400;
+    color: $color-subtext1;
+    @include vw(line-height, 23.8px);
+    strong{font-weight:600;}
+  }
+
+  .form-notice {
+    color: $color-subtext1;
+    font-weight: 400;
+    @include vw(font-size, 13px);
+    @include vw(line-height, 22.1px);
   }
 
   .form-text {
@@ -885,6 +899,20 @@
       strong {
         font-weight: 600;
       }
+    }
+  }
+
+  .input-btn-box {
+    display: flex;
+    align-items: center;
+    .form-control{
+      width:calc(100% - 105px);
+    }
+
+    .btn{
+      @include vw(width, 105px);
+      @include vw(margin-left, 8px);
+      padding:0;
     }
   }
 
