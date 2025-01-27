@@ -98,12 +98,67 @@
 	</div>
 
 	<!-- 팝업 -->
+	<div class="popup-page popup-inquiry" id="popupQnAWrite">
+		<div class="popup-wrap">
+			<a href="javascript:popupPageClose('#popupQnAWrite');"  class="popup-close">팝업닫기</a>
+			<div class="popup-title">
+				1:1 Q&A 작성
+			</div>
+			<div class="popup-cont popup-scroll">
+				<div class="lecture-data-input">
+					<dl>
+						<dt>제목</dt>
+						<dd>
+							<div class="form-control">
+								<input type="text" class="text" placeholder="문의 제목을 입력하세요" value="" />
+							</div>
+						</dd>
+					</dl>
+
+					
+					<dl>
+						<dt>문의내용</dt>
+						<dd>
+							<div class="form-control">
+								<textarea class="textarea" cols="100" rows="100" placeholder="내용을 입력해주세요.">
+								</textarea>
+							</div>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>파일첨부</dt>
+						<dd>
+							<div class="file-box">
+								<div class="form-control">
+									<div class="fake-file-box">
+										<input type="text" class="text fake-file-name"placeholder="첨부파일" readonly="">
+										<div class="fake-file">
+											<input type="file" id="fileUpload" name="file" >
+											<label for="fileUpload">찾아보기</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-notice"> * 파일크기는 10M를 초과하여서는 안됩니다.</div>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+
+				<div class="popup-btn">
+					<a href="javascript:popupPageClose('#popupQnAWrite');" class="btn full btn-blue large"><strong>등록</strong></a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 </div>
 
 <script src="../../assets/js/m.script.js"></script>
 <script>
 	$(function(){
-		
+		popupPageOpen('#popupQnAWrite')
 	});
 </script>
 </body>

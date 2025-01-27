@@ -3953,6 +3953,50 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
+#wrap #popupQnAWrite .popup-cont {
+  padding-top: 10.66667vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap #popupQnAWrite .popup-cont {
+    padding-top: 40px;
+  }
+}
+
+#wrap #popupQnAWrite .popup-cont .lecture-data-input dl {
+  margin-top: 8.53333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap #popupQnAWrite .popup-cont .lecture-data-input dl {
+    margin-top: 32px;
+  }
+}
+
+#wrap #popupQnAWrite .popup-cont .lecture-data-input dl:first-child {
+  margin-top: 0;
+}
+
+#wrap #popupQnAWrite .popup-cont .form-notice {
+  margin-top: 2.13333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap #popupQnAWrite .popup-cont .form-notice {
+    margin-top: 8px;
+  }
+}
+
+#wrap #popupQnAWrite .popup-btn {
+  padding-top: 8.53333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap #popupQnAWrite .popup-btn {
+    padding-top: 32px;
+  }
+}
+
 #wrap {
   font-family: "Pretendard", "Noto Sans KR", "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", "Dotum", "돋움", "Gulim", "굴림", "굴림체", Sans-Serif;
   color: #2C2923;
@@ -4995,7 +5039,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 @media screen and (min-width: 720px) {
   #wrap .form-control .select {
-    background-position: 99% 0;
+    background-position: 99% center;
   }
 }
 
@@ -13166,49 +13210,6 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 
-#wrap .section-mypage-update {
-  /*
-		.lecture-data-input{
-			dl {
-				@include vw(margin-top, 32px);
-			}
-
-			.input-box{
-				.input-text-start{@include vw(width, 48px);}
-				.form-control{width:100%;}
-
-			}
-
-			.average-box{
-				display:flex;
-				align-items:center;
-				.text{@include vw(width, 54px);}
-				.space{
-					display: inline-block;@include vw(padding,0 8px);
-					@include vw(font-size,14px);font-weight:400;color:$color-black;@include vw(line-height,23.8px);
-					&.first{
-						padding-right:0;
-					}
-				}
-
-				.form-text{margin-top:0;}
-			}
-		}
-
-		.notice-list{
-			@include vw(margin-top, 32px);
-		}
-
-		.form-control .textarea{
-			@include vw(height, 140px);
-		}
-
-		.checkbox-box{
-			.form-control{width:50%;}
-		}
-			*/
-}
-
 #wrap .section-mypage-update .holder:last-child {
   padding-bottom: 0;
 }
@@ -13299,6 +13300,16 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 
 @media screen and (min-width: 375px) {
   #wrap .section-mypage-update .lecture-data-input dl dd .notice {
+    margin-top: 8px;
+  }
+}
+
+#wrap .section-mypage-update .lecture-data-input dl dd .form-control + .form-notice {
+  margin-top: 2.13333vw;
+}
+
+@media screen and (min-width: 375px) {
+  #wrap .section-mypage-update .lecture-data-input dl dd .form-control + .form-notice {
     margin-top: 8px;
   }
 }
@@ -13495,12 +13506,12 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 
 #wrap .section-login-content {
-  margin-top: 10.66667vw;
+  margin-top: 16vw;
 }
 
 @media screen and (min-width: 375px) {
   #wrap .section-login-content {
-    margin-top: 40px;
+    margin-top: 60px;
   }
 }
 
@@ -14092,7 +14103,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   content: '';
   width: 50%;
   height: 1px;
-  background-color: #7A746A;
+  background-color: #ddd;
   position: absolute;
   top: 12px;
 }
@@ -14209,6 +14220,10 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   font-size: 18px;
   font-weight: 600;
   color: #2c2923;
+}
+
+#wrap .section-join-content__title + .form-control {
+  padding-top: 12px;
 }
 
 #wrap .section-join-content__desc {

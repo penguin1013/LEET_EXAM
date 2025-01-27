@@ -31,7 +31,7 @@
 			<div class="section-header">
 				<div class="header-title">
 					<a href="javascript:;" class="btn-back"><img src="../../assets/images/btn_back_large.svg" alt="back" /></a>
-					<h2 class="small"><a href="javascript:;">회원정보 수정</a></h2>
+					<h2 ><a href="javascript:;">회원정보 수정</a></h2>
 				</div>
 			</div>
 
@@ -61,7 +61,7 @@
 
 			<div class="hr"></div>
 			
-			<div class="section-mypage-update">
+			<div class="section-member-content section-mypage-update">
 				<div class="wrap">
 					<div class="lecture-data-input">
 						<dl>
@@ -97,68 +97,63 @@
 								<div class="form-control">
 									<input type="text" class="text"  placeholder="비밀번호를 한 번 더 입력하세요." value="" />
 								</div>
-								<div class="form-text">*숫자, 영문, 특수문자 가능</div>
+								<div class="form-notice">* 영문, 숫자, 특수문자 조합 8-20자 </div>
 							</dd>
 						</dl>
 
 						<dl>
 							<dt>휴대폰번호</dt>
-							<dd class="phone">
-								<div class="input-box">
+							<dd>
+								<div class="input-btn-box">
 									<div class="form-control">
-										<div class="select">
-											<select name="" id="">
-												<option value="">010</option>
-											</select>
-										</div>
+										<input type="text" class="text" placeholder="휴대폰번호를 입력하세요" value="">
 									</div>
-									<div class="form-space">-</div>
-									<div class="form-control">
-										<input type="text" class="text"  placeholder="naver.com" value="" />
-									</div>
-									<div class="form-space">-</div>
-									<div class="form-control">
-										<input type="text" class="text"  placeholder="naver.com" value="" />
-									</div>
+									<a href="javascript:;" class="btn middle">인증번호 발송</a>
 								</div>
-
-								<a href="javascript:;" class="btn full middle">인증번호 발송</a>
 							</dd>
 						</dl>
 
 						<dl>
 							<dt>인증번호</dt>
 							<dd>
-								<div class="form-control">
-									<input type="text" class="text" placeholder="" value="">
-									<a href="javascript:;" class="btn small btn-address">인증번호 확인</a>
-								</div>
-								<div class="form-text">*휴대폰으로 수신된 인증번호를 입력후 전송해 주세요.</div>
-							</dd>
-						</dl>
-
-						<dl>
-							<dt>배송주소</dt>
-							<dd>
-								<div class="form-control">
-									<input type="text" class="text" placeholder="우편번호" value="" />
-									<a href="javascript:;" class="btn small btn-address">주소검색</a>
-								</div>
-							</dd>
-							<dd>
-								<div class="form-control">
-									<input type="text" class="text" placeholder="주소 입력" value="" />
-								</div>
-							</dd>
-							<dd>
-								<div class="form-control">
-									<input type="text" class="text" placeholder="나머지 주소를 입력하세요" value="" />
+								<div class="input-btn-box">
+									<div class="timer-box">
+										<div class="form-control">
+											<input type="text" class="text" placeholder="인증번호를 입력하세요" value="12345">
+											<span class="timer">03:00</span>
+										</div>
+									</div>
+									<a href="javascript:;" class="btn middle">확인</a>
 								</div>
 							</dd>
 						</dl>
 
+
 						<dl>
-							<dt>이벤트 및 혜택정보 수신(선택)</dt>
+							<dt>주소</dt>
+							<dd>
+								<div class="input-btn-box">
+									<div class="form-control">
+										<input type="text" class="text" placeholder="우편번호" value="">
+									</div>
+									<a href="javascript:;" class="btn middle">주소검색</a>
+								</div>
+
+							</dd>
+							<dd>
+								<div class="form-control">
+									<input type="text" class="text" placeholder="주소 입력" value="">
+								</div>
+							</dd>
+							<dd>
+								<div class="form-control">
+									<input type="text" class="text" placeholder="상세주소를 입력하세요" value="">
+								</div>
+							</dd>
+						</dl>
+
+						<dl>
+							<dt>정보수신 동의</dt>
 							<dd>
 								<div class="checkbox-box">
 									<div class="form-control">
@@ -195,9 +190,9 @@
 				<div class="wrap">
 					<h5><strong>탈퇴하기</strong></h5>
 					<ul class="notice-list">
-						<li>· 회원탈퇴를 하시면 개인정보와 포인트·쿠폰 및 모든 활동기록이 삭제됩니다</li>
-						<li>· 회원탈퇴 후에는 동일한 아이디로 재가입이 불가합니다.</li>
-						<li>· 회원탈퇴 시 상상로스쿨, 상상공무원, 상상모의고사 사이트 이용이 모두 불가합니다.</li>
+						<li>• 회원탈퇴 시, 개인정보와 포인트·쿠폰 및 모든 활동기록이 삭제됩니다.</li>
+						<li>• 회원탈퇴 후에는 동일한 아이디로 재가입이 불가합니다.</li>
+						<li>• 회원탈퇴 시, 관련 사이트 이용이 모두 불가합니다.</li>
 					</ul>
 
 					<a href="javascript:popupOpen('#popupAlert2');" class="btn large btn-delete">탈퇴하기</a>

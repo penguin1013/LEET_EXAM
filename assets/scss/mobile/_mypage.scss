@@ -497,6 +497,7 @@
 						.input-box{
 							@include vw(margin-bottom, 8px);
 							.form-control{width:46%;}
+							
 							.form-space{
 								color: $color-subtext3;
 								font-weight: 400;
@@ -526,49 +527,14 @@
 					.notice{
 						@include vw(margin-top, 8px);
 					}
+
+					.form-control + .form-notice{@include vw(margin-top, 8px);}
 				}
 			}
 		}
-/*
-		.lecture-data-input{
-			dl {
-				@include vw(margin-top, 32px);
-			}
 
-			.input-box{
-				.input-text-start{@include vw(width, 48px);}
-				.form-control{width:100%;}
 
-			}
 
-			.average-box{
-				display:flex;
-				align-items:center;
-				.text{@include vw(width, 54px);}
-				.space{
-					display: inline-block;@include vw(padding,0 8px);
-					@include vw(font-size,14px);font-weight:400;color:$color-black;@include vw(line-height,23.8px);
-					&.first{
-						padding-right:0;
-					}
-				}
-
-				.form-text{margin-top:0;}
-			}
-		}
-
-		.notice-list{
-			@include vw(margin-top, 32px);
-		}
-
-		.form-control .textarea{
-			@include vw(height, 140px);
-		}
-
-		.checkbox-box{
-			.form-control{width:50%;}
-		}
-			*/
 	}
 
 	.section-mypage-action{
