@@ -27,69 +27,106 @@
 <body>
 <div id="wrap">
 	<div id="container">
-		<div id="contents" class="">
+		<div id="contents" class="member">
 			<div class="section-header">
 				<div class="header-title">
 					<a href="javascript:;" class="btn-back"><img src="../../assets/images/btn_back_large.svg" alt="back" /></a>
-					<h2><a href="javascript:;">아이디/비밀번호 찾기</a></h2>
+					<h2><a href="javascript:;">통합회원 전환</a></h2>
 				</div>
 			</div>
-
-			<div class="section-exam-tab">
+			<div class="section-join-title">
 				<div class="wrap">
-					<div class="tab-menu">
+					<div class="join-step-list">
 						<ul>
 							<li>
-								<a href="javascript:;">아이디 찾기</a>
+								<span class="num">1</span>
+								<p>약관 동의</p>
 							</li>
-							<li  class="active">
-								<a href="javascript:;">비밀번호 찾기</a>
+							<li>
+								<span class="num">2</span>
+								<p>대상 확인</p>
+							</li>
+							<li class="active">
+								<span class="num">3</span>
+								<p>정보 입력</p>
+							</li>
+							<li>
+								<span class="num">4</span>
+								<p>가입 완료</p>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</div>
-
-			<div class="section-member-info">
-				<div class="wrap">
-					<div class="form-notice">* 회원정보에 등록한 정보를 입력해주세요.</div>
-					<div class="form-control">
-						<span class="fake-radio">
-							<input type="radio" id="radioType1" class="radio" name="radioSelectA" checked="">
-							<label for="radioType1">이메일</label>
-						</span>
-						<span class="fake-radio">
-							<input type="radio" id="radioType2" class="radio" name="radioSelectA">
-							<label for="radioType2">휴대폰번호</label>
-						</span>
-						
-					</div>
-				</div>
-			</div>
-
 			<div class="hr-line"></div>
-
 			<div class="section-member-content">
 				<div class="wrap">
+					<p class="section-join-content__title">통합계정 정보 입력</p>
+					<p class="form-text">
+						현재 로그인 되어 있는 기본 회원 정보가 자동으로 입력되며 통합계정 이메일 ID를 설정해주세요.<br />
+						통합회원으로 전환 후 이메일 ID를 통해 로그인이 가능합니다.
+					</p>
+					<p class="form-text color-point">* 통합계정 이메일 ID 입력 후 변경 불가</p>
 					<div class="lecture-data-input">
 						<dl>
-							<dt>이메일 ID</dt>
+							<dt>기존 ID</dt>
 							<dd>
 								<div class="form-control">
-									<input type="text" class="text" placeholder="이메일 ID를 입력하세요" value="" />
+									<input type="text" class="text disabled" disabled placeholder="" value="sangsang" />
 								</div>
 							</dd>
 						</dl>
+						<dl>
+							<dt>이메일 ID</dt>
+							<dd>
+								<div class="input-btn-box">
+									<div class="form-control">
+										<input type="text" class="text" placeholder="이메일 ID를 입력하세요" value="" />
+									</div>
+									<a href="javascript:;" class="btn middle">중복 확인</a>
+								</div>
+								<p class="form-text color-point">이메일 형식이 맞지 않습니다.</p>
+							</dd>
+						</dl>
 
+						<dl>
+							<dt>비밀번호</dt>
+							<dd>
+								<div class="form-control">
+									<input type="text" class="text" placeholder="비밀번호를 입력하세요" value="" />
+								</div>
+								<p class="form-text color-point">비밀번호는 최소 8자리 최대 16자리, 문자/숫자/특수문자를 혼용해야 합니다.</p>
+							</dd>
+							<dd>
+								<div class="form-control">
+									<input type="text" class="text" placeholder="비밀번호를 한 번 더 입력하세요" value="" />
+								</div>
+							</dd>
+						</dl>
 						<dl>
 							<dt>이름</dt>
 							<dd>
 								<div class="form-control">
-									<input type="text" class="text" placeholder="이름을 입력하세요" value="" />
+									<input type="text" class="text disabled" disabled placeholder="이름을 입력하세요" value="홍길동" />
 								</div>
 							</dd>
 						</dl>
 
+						<dl>
+							<dt>성별</dt>
+							<dd>
+								<div class="form-control">
+									<span class="fake-radio">
+										<input type="radio" id="radioType1" class="radio" name="radioSelectA" checked="" />
+										<label for="radioType1">남</label>
+									</span>
+									<span class="fake-radio">
+										<input type="radio" id="radioType2" class="radio" name="radioSelectA" />
+										<label for="radioType2">여</label>
+									</span>
+								</div>
+							</dd>
+						</dl>
 						<dl>
 							<dt>생년월일</dt>
 							<dd>
@@ -118,15 +155,11 @@
 								</div>
 							</dd>
 						</dl>
-
 						<dl>
-							<dt>정보 수신 이메일</dt>
+							<dt>정보수신 이메일</dt>
 							<dd>
-								<div class="input-btn-box">
-									<div class="form-control">
-										<input type="text" class="text" placeholder="이메일을 입력하세요" value="" />
-									</div>
-									<a href="javascript:;" class="btn middle">인증번호받기</a>
+								<div class="form-control">
+									<input type="text" class="text" placeholder="이메일을 입력하세요" value="" />
 								</div>
 							</dd>
 						</dl>
@@ -138,19 +171,23 @@
 									<div class="form-control">
 										<input type="text" class="text" placeholder="휴대폰번호를 입력하세요" value="" />
 									</div>
-									<a href="javascript:;" class="btn middle">인증번호받기</a>
+									<a href="javascript:;" class="btn middle">인증번호 발송</a>
 								</div>
 							</dd>
 						</dl>
 
 						<dl>
-							<dt>인증번호</dt>
+							<dt>이벤트 및 혜택정보 수신(선택)</dt>
 							<dd>
-								<div class="input-btn-box">
-									<div class="form-control">
-										<input type="text" class="text" placeholder="인증번호를 입력하세요" value="" />
+								<div class="form-control">
+									<div class="fake-checkbox">
+										<input type="checkbox" id="checkboxA1_1" class="checkbox" checked />
+										<label for="checkboxA1_1">SMS</label>
 									</div>
-									<a href="javascript:;" class="btn middle">확인</a>
+									<div class="fake-checkbox">
+										<input type="checkbox" id="checkboxA1_2" class="checkbox" checked />
+										<label for="checkboxA1_2">Email</label>
+									</div>
 								</div>
 							</dd>
 						</dl>
@@ -159,35 +196,16 @@
 			</div>
 
 			<div class="section-action fixed-bottom">
-				<a href="javascript:popupOpen('#popupAlert2');" class="btn btn-blue large"><strong>확인</strong></a>
+				<a href="javascript:;" class="btn large">이전</a>
+				<a href="javascript:;" class="btn large btn-blue">다음</a>
 			</div>
 		</div>
 	</div>
 
 	<!-- 팝업 -->
-	<div class="popup popup-alert" id="popupAlert2">
-		<div class="popup-wrap">
-			<div class="popup-text">
-				<p>
-					회원님의 휴대폰으로 <br/>
-					임시 비밀번호를 전송했습니다.<br/>
-					휴대폰 : 010-0000-0000
-				</p>
-			</div>
-			<div class="popup-action">
-				<a href="javascript:popupClose('#popupAlert2');">확인</a>
-			</div>
-		</div>
-	</div>
-
-
 </div>
 
 <script src="../../assets/js/m.script.js"></script>
-<script>
-	$(function(){
-		
-	});
-</script>
+<script></script>
 </body>
 </html>

@@ -25,32 +25,47 @@
 	<script src="../../assets/libs/slick/slick-1.6.0.min.js"></script>
 </head>
 <body>
-
 <div id="wrap">
-	<div class="section-error">
-		<div class="wrap">
-			<h3>시스템 에러</h3>
-			<div class="text-box">
-				<p>
-					요청하신 페이지에 오류가 발생하였습니다. <br/>
-					방문하시려는 페이지의 주소가 잘못 입력되었거나 <br/>
-					페이지의 주소가 변경 혹은 삭제되어<br/>
-					요청하신 페이지를 찾을 수 없습니다. <br/>
-					<br/>
-					지속적인 오류 발생 시 관리자에게 문의해주시기 바랍니다.
-				</p>
+	<div id="container">
+		<div id="contents">
+			<div class="section-header">
+				<div class="header-title">
+					<a href="javascript:;" class="btn-back"><img src="../../assets/images/btn_back_large.svg" alt="back" /></a>
+					<h2><a href="javascript:;">회원정보수정</a></h2>
+				</div>
 			</div>
-			<div class="action flex-center">
-				<a href="javascript:;" class="btn large">이전 페이지 이동</a>
+
+			<div class="section-password">
+				<div class="wrap">
+					<div class="text-box">
+						<p>
+							개인정보수정을 위해 본인확인이 필요합니다.<br/>
+							사이트에서 사용하는 로그인 비밀번호를 입력해주세요.
+						</p>
+					</div>
+
+					<div class="password-box">
+						<div class="form-control">
+							<input type="text" class="text full" placeholder="비밀번호를 입력하세요" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section-action fixed-bottom">
+				<a href="javascript:;" class="btn btn-blue large full"><strong>확인</strong></a>
 			</div>
 		</div>
 	</div>
+	
+	<!-- 팝업 -->
+
 </div>
 
-<script src="../../assets/js/script.js"></script>
+<script src="../../assets/js/m.script.js"></script>
 <script>
 	$(function(){
-		popupOpen('#popupLogin');
+
 	});
 </script>
 </body>

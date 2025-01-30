@@ -665,8 +665,19 @@
 					font-weight: 600;
 					@include vw(font-size, 18px);
 					@include vw(line-height, 27px);
+					
+				}
+
+				&.small{
+					a{
+						color: $color-maintext;
+						@include vw(font-size, 16px);
+						@include vw(line-height, 27.2px);
+					}
 				}
 			}
+
+
 		}
 
 		.header-tab {

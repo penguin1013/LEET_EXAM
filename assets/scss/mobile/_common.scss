@@ -14,6 +14,10 @@
     padding-top: 0 !important;
   }
 
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+
   .underline {
     text-decoration: underline;
   }
@@ -43,10 +47,25 @@
   }
 
   .hr {
-    border-top: 1px solid $color-bg3;
+    border-top: 1px solid $color-bg2;
     background-color: $color-bg2;
     @include vw(height, 10px);
-	@include vw(margin-top, 32px);
+  }
+
+  .hr-line {
+    border-top: 1px solid $color-bg3;
+		background-color: $color-bg2;
+		@include vw(height, 10px);
+  }
+
+
+
+  .space{
+    color: $color-subtext3;
+    font-weight: 400;
+    @include vw(font-size, 14px);
+    @include vw(line-height, 23.8px);
+    @include vw(margin,0 8px);
   }
 
   .border-line-box {
@@ -379,8 +398,9 @@
     @include vw(font-size, 14px);
     font-weight: 400;
     @include vw(line-height, 23.8px);
+    color: $color-maintext;
     p {
-      color: $color-black;
+      color: $color-maintext;
       @include vw(font-size, 13px);
       font-weight: 400;
       @include vw(line-height, 22.1px);
@@ -393,17 +413,25 @@
 
   .notice {
     @include vw(margin-top, 16px);
-	@include vw(font-size, 14px);
-	font-weight: 400;
-	color: $color-subtext1;
-	@include vw(line-height, 23.8px);
+    @include vw(font-size, 14px);
+    font-weight: 400;
+    color: $color-subtext1;
+    @include vw(line-height, 23.8px);
+    strong{font-weight:600;}
   }
 
-  .form-text {
-    color: $color-gray;
+  .form-notice {
+    color: $color-subtext1;
     font-weight: 400;
     @include vw(font-size, 13px);
     @include vw(line-height, 22.1px);
+  }
+
+  .form-text {
+    color: $color-subtext3;
+    font-weight: 400;
+    @include vw(font-size, 14px);
+    @include vw(line-height, 23.8px);
     @include vw(margin-top, 8px);
   }
 
@@ -451,6 +479,7 @@
   }
 
   .form-control {
+    position:relative;
     font-size: 0;
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -465,7 +494,10 @@
     .select {
       display: inline-block;
       font-size: 0;
-      background: url("../images/icon_select_arrow.svg") no-repeat 99% center;
+      background: url("../images/icon_select_arrow.svg") no-repeat 95% center;
+      @include breakpoint(maxMobile){
+        background-position:99% center;
+      }
       @include vw(background-size, 20px 20px);
       width: 100%;
       select {
@@ -500,18 +532,18 @@
       width: 100%;
       @include vw(padding, 8px 8px 8px 16px);
       @include vw(font-size, 14px);
-      border: 1px solid $color-light-brown;
+      border: 1px solid $color-line;
       background: $color-white;
       @include boxSizing(border-box);
-      color: $color-black;
+      color: $color-maintext;
       @include vw(height, 48px);
       &::placeholder {
-        color: $color-light-gray;
+        color: $color-subtext3;
         @include vw(font-size, 14px);
       }
       &.disabled {
-        background-color: $color-light-beige !important;
-        color: $color-gray;
+        background-color: $color-bg2 !important;
+        color: $color-subtext2;
       }
 
       &.small {
@@ -873,6 +905,20 @@
     }
   }
 
+  .input-btn-box {
+    display: flex;
+    align-items: center;
+    .form-control{
+      width:calc(100% - 105px);
+    }
+
+    .btn{
+      @include vw(width, 105px);
+      @include vw(margin-left, 8px);
+      padding:0;
+    }
+  }
+
 	.select-box{
 		display:flex;
 		justify-content: center;
@@ -1051,6 +1097,10 @@
 
 	
 
+    &.half {
+      width: 50%;
+    }
+    
     &.full {
       width: 100%;
     }
@@ -1103,7 +1153,7 @@
     &.btn-file {
       position: relative;
       display: inline-block;
-      background: $color-light-beige;
+      background: $color-bg2;
       @include boxSizing(border-box);
       width: 100%;
       @include vw(height, 48px);
@@ -1212,9 +1262,13 @@
   }
 
   .section-action {
+    &.fixed-bottom{
+      position:fixed;left:0;right:0;bottom:0;
+    }
     @include vw(padding, 20px 20px);
     display: flex;
     justify-content: center;
+    background-color:$color-white;
     a {
       &:only-child,
       &:nth-child(1):nth-last-child(1) {
@@ -1232,37 +1286,49 @@
     }
   }
 
-  .text-box {
-	dl{
-		@include vw(margin-top, 32px);
-		&:first-child{margin-top:0;}
-		dt,dd{
-			@include vw(font-size, 14px);
-			@include vw(line-height, 23.8px);
-			color: $color-maintext;
-			font-weight: 400;
-		}
-		dt{
-			@include vw(margin-bottom, 16px);
-		}
-		dd{
 
-		}
-	}
+
+  .text-box {
+    dl{
+      @include vw(margin-top, 32px);
+      &:first-child{margin-top:0;}
+      dt,dd{
+        @include vw(font-size, 14px);
+        @include vw(line-height, 23.8px);
+        color: $color-maintext;
+        font-weight: 400;
+      }
+      dt{
+        @include vw(margin-bottom, 16px);
+      }
+      dd{
+
+      }
+    }
 
     p {
       @include vw(font-size, 14px);
       @include vw(line-height, 23.8px);
-      color: $color-gray;
+      color: $color-maintext;
       font-weight: 400;
+      text-align:center;
       strong {
         display: block;
         @include vw(margin-bottom, 4px);
-        color: $color-black;
+        color: $color-maintext;
         font-weight: 600;
         @include vw(font-size, 16px);
         @include vw(line-height, 27.2px);
       }
+    }
+  }
+
+  .comment-box {
+    p {
+      @include vw(font-size, 16px);
+      @include vw(line-height, 27.2px);
+      color: $color-maintext;
+      font-weight: 400;
     }
   }
 
@@ -1287,6 +1353,7 @@
           font-weight: 400;
           @include vw(font-size, 14px);
           @include vw(line-height, 23.8px);
+
           .subject {
             display: block;
             @include vw(margin-bottom, 4px);

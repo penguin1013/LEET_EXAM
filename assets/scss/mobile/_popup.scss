@@ -1477,4 +1477,24 @@
 			}
 		}
 	}
+
+	#popupQnAWrite{
+		.popup-cont{
+			@include vw(padding-top, 40px);
+			.lecture-data-input dl{
+				@include vw(margin-top, 32px);
+				&:first-child{margin-top:0;}
+			}
+
+			.form-notice{
+				@include vw(margin-top, 8px);
+			}
+		}
+
+		.popup-btn{
+			@include vw(padding-top, 32px);
+		}
+	}
+
+
 }
