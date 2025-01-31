@@ -1306,6 +1306,10 @@
 
 	/* 모의고사 팝업 */
 	#popupExamCheck{
+		.popup-cont{
+			max-width:375px;
+			margin:0 auto;
+		}
 		h3{
 			@include vw(margin-bottom, 20px);
 		}
