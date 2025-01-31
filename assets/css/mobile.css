@@ -562,7 +562,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   font-weight: 600;
   text-align: center;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #E4DED3;
+  border-bottom: 1px solid #ddd;
 }
 @media screen and (min-width: 375px) {
   #wrap .popup-page .popup-title {
@@ -2917,7 +2917,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap #popupPresentation .section-zero-agree dl dd .all {
   padding-bottom: 3.2vw;
   margin-bottom: 3.2vw;
-  border-bottom: 1px solid #E4DED3;
+  border-bottom: 1px solid #ddd;
 }
 @media screen and (min-width: 375px) {
   #wrap #popupPresentation .section-zero-agree dl dd .all {
@@ -3580,7 +3580,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   align-items: center;
   margin: 0 auto;
   box-sizing: border-box;
-  border-bottom: 1px solid #E4DED3;
+  border-bottom: 1px solid #ddd;
   margin-left: 5.3333333333vw;
 }
 @media screen and (min-width: 375px) {
@@ -6564,7 +6564,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   display: inline-block;
   font-weight: 600;
   font-size: 4.2666666667vw;
-  line-height: 7.2533333333vw;
+  padding: 1.0666666667vw 0 3.2vw;
   color: rgb(154, 154, 154);
 }
 @media screen and (min-width: 375px) {
@@ -6574,7 +6574,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 @media screen and (min-width: 375px) {
   #header .header-gnb ul li a {
-    line-height: 27.2px;
+    padding: 4px 0 12px;
   }
 }
 #header .header-gnb ul li.active a {
@@ -10950,7 +10950,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   font-weight: 400;
   line-height: 23.8px;
   margin-bottom: 40px;
-  border: 1px solid #e4ded3;
+  border: 1px solid #ddd;
 }
 #wrap .member .agree-box p {
   color: #2C2923;
@@ -10976,7 +10976,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 #wrap .member .agree-box-wrap {
   margin-top: -20px;
   padding: 20px;
-  border: 1px solid #e4ded3;
+  border: 1px solid #ddd;
 }
 #wrap .member .agree-box-wrap .border-bottom-line {
   padding-bottom: 12px;

@@ -192,7 +192,7 @@
       
       margin: 0 auto;
       box-sizing: border-box;
-      border-bottom: 1px solid $color-light-brown;
+      border-bottom: 1px solid $color-line;
       @include vw(margin-left, 20px);
       &::-webkit-scrollbar {
         display: none;

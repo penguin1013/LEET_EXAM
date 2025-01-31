@@ -437,7 +437,8 @@
 					display: inline-block;
 					font-weight: 600;
 					@include vw(font-size, 16px);
-					@include vw(line-height, 27.2px);
+					//@include vw(line-height, 27.2px);
+					@include vw(padding, 4px 0 12px);
 					color: rgba(154, 154, 154, 1); // #9a9a9a
 				}
 
