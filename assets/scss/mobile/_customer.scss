@@ -2,7 +2,7 @@
     .section-notice-view{
         @include vw(padding,40px 0);
         .view-box{
-			border-top: 1px solid $color-light-brown;
+			border-top: 1px solid $color-line;
 			@include vw(padding,16px 0);
 			@include vw(line-height, 23.8px);
 			@include vw(font-size, 14px);

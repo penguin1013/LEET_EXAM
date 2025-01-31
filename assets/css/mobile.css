@@ -3004,9 +3004,12 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap #popupExamCheck .answer-check-box table {
   width: 100%;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   border-left: 0;
   border-right: 0;
+}
+#wrap #popupExamCheck .answer-check-box table:first-child {
+  border-top: 1px solid #ddd;
 }
 #wrap #popupExamCheck .answer-check-box table tr th {
   width: 11.7333333333vw;
@@ -4189,7 +4192,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   padding: 3.2vw 4.2666666667vw;
   font-size: 3.7333333333vw;
   font-weight: 400;
-  border: 1px solid #E4DED3;
+  border: 1px solid #ddd;
   color: #2C2923;
   -webkit-appearance: none;
   appearance: none;
@@ -4278,7 +4281,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   line-height: 6.3466666667vw;
   border-width: 0.2666666667vw;
   border-style: solid;
-  border-color: #E4DED3;
+  border-color: #ddd;
   resize: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -4326,7 +4329,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap .form-control .fake-file-box .fake-file-name {
   width: 100%;
-  border: 1px solid #E4DED3;
+  border: 1px solid #ddd;
   padding: 2.4vw 21.3333333333vw 2.4vw 4.2666666667vw;
 }
 @media screen and (min-width: 375px) {
@@ -4547,7 +4550,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   box-sizing: border-box;
 }
 #wrap .custom-select .selected {
-  border: 1px solid #E4DED3;
+  border: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4933,7 +4936,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   padding-right: 6.4vw;
   border-radius: 1.0666666667vw;
   height: 10.6666666667vw;
-  border: 1px solid #E4DED3;
+  border: 1px solid #ddd;
 }
 @media screen and (min-width: 375px) {
   #wrap .select-box .select select {
@@ -6542,11 +6545,11 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   display: flex;
   align-items: center;
   height: 100%;
-  margin-right: 5.3333333333vw;
+  margin-right: 8.5333333333vw;
 }
 @media screen and (min-width: 375px) {
   #header .header-gnb ul li {
-    margin-right: 20px;
+    margin-right: 32px;
   }
 }
 #header .header-gnb ul li:first-child {
@@ -6816,7 +6819,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #contents .section-header .header-title {
   position: relative;
-  border-bottom: 1px solid #E4DED3;
+  border-bottom: 1px solid #ddd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7296,7 +7299,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   width: 100%;
 }
 #wrap .section-exam-list .exam-list .info-box {
-  width: 75%;
+  width: 74%;
 }
 #wrap .section-exam-list .exam-list .info-box .subject {
   font-weight: 400;
@@ -7376,6 +7379,10 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap .section-exam-list .exam-list .action-box .btn {
   border-radius: 0;
+  border-left: 0;
+}
+#wrap .section-exam-list .exam-list .action-box .btn:first-child {
+  border-left: 1px solid #ddd;
 }
 #wrap .section-exam-list .exam-list .action-box .btn.btn-blue {
   border-left: 1px solid #ddd;
@@ -7757,14 +7764,14 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 #wrap .section-exam-action {
-  margin-top: 26.6666666667vw;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #FFFFFF;
   padding: 4.2666666667vw 0;
   border-top: 1px solid #ddd;
-}
-@media screen and (min-width: 375px) {
-  #wrap .section-exam-action {
-    margin-top: 100px;
-  }
 }
 @media screen and (min-width: 375px) {
   #wrap .section-exam-action {
@@ -7775,6 +7782,12 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 6.4vw;
+}
+@media screen and (min-width: 375px) {
+  #wrap .section-exam-action .wrap {
+    padding: 0 24px;
+  }
 }
 #wrap .section-exam-action .action-box {
   display: flex;
@@ -7926,6 +7939,8 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap .section-exam-action .action {
   margin-left: auto;
+  position: relative;
+  right: -4px;
 }
 #wrap .section-exam-info .action {
   margin-top: 5.3333333333vw;
@@ -8128,8 +8143,38 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap .section-exam-filter .wrap {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+#wrap .section-exam-filter .toggle-switch {
+  margin: 0;
+  margin-left: auto;
+  width: auto;
+}
+#wrap .section-exam-filter .select-box {
+  width: 41.6vw;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 375px) {
+  #wrap .section-exam-filter .select-box {
+    width: 156px;
+  }
+}
+#wrap .section-exam-filter .select-box .select {
+  width: 28vw;
+}
+@media screen and (min-width: 375px) {
+  #wrap .section-exam-filter .select-box .select {
+    width: 105px;
+  }
+}
+#wrap .section-exam-filter .select-box .select-text-end {
+  width: 11.4666666667vw;
+}
+@media screen and (min-width: 375px) {
+  #wrap .section-exam-filter .select-box .select-text-end {
+    width: 43px;
+  }
 }
 #wrap .section-exam-filter + .section-exam-problem {
   padding-top: 8vw;
@@ -8157,7 +8202,6 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 }
 #wrap .section-exam-tab .wrap .tab-menu {
   padding-left: 0;
-  padding-bottom: 0;
 }
 #wrap .section-exam-tab .wrap .tab-small-menu {
   padding-top: 4.2666666667vw;
@@ -8463,6 +8507,14 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
 @media screen and (min-width: 375px) {
   #wrap .section-exam-commentary .toggle-box dl dd .exam-paper {
     padding: 20px;
+  }
+}
+#wrap .section-exam-toggle .toggle-box {
+  padding-bottom: 5.3333333333vw;
+}
+@media screen and (min-width: 375px) {
+  #wrap .section-exam-toggle .toggle-box {
+    padding-bottom: 20px;
   }
 }
 #wrap .section-exam-toggle .toggle-box dl dd p {
@@ -11943,7 +11995,7 @@ input:focus, select:focus, option:focus, textarea:focus, button:focus {
   }
 }
 #wrap .section-notice-view .view-box {
-  border-top: 1px solid #E4DED3;
+  border-top: 1px solid #ddd;
   padding: 4.2666666667vw 0;
   line-height: 6.3466666667vw;
   font-size: 3.7333333333vw;

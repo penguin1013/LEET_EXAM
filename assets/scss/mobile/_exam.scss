@@ -1,5 +1,6 @@
 #wrap{
 	.section-exam-list{
+
 		.exam-list{
 			@include vw(padding, 24px 0);
 			display:flex;
@@ -13,7 +14,7 @@
 			}
 
 			.info-box{
-				width:75%;
+				width:74%;
 				.subject{
 					font-weight: 400;
 					@include vw(font-size, 16px);
@@ -52,8 +53,12 @@
 				.btn{
 					border-radius:0;
 					@extend %variable;
+					border-left:0;
+					&:first-child{
+						border-left:1px solid $color-line;
+					}
 					&.btn-blue{
-						border-left:1px solid #ddd;
+						border-left:1px solid $color-line;
 						&:first-child{
 							border-left:0;
 						}
@@ -243,13 +248,18 @@
 	}
 
 	.section-exam-action{
-		@include vw(margin-top,100px);
+		position:fixed;
+		left:0;right:0;bottom:0;z-index:10;
+		background-color:$color-white;
+		//@include vw(margin-top,100px);
+		
 		@include vw(padding, 16px 0);
 		border-top:1px solid $color-line;
 		.wrap{
 			display:flex;
 			justify-content: space-between;
 			align-items:center;
+			@include vw(padding,0  24px);
 		}
 		.action-box{
 			display:flex;
@@ -290,6 +300,8 @@
 
 		.action{
 			margin-left:auto;
+			position:relative;
+			right:-4px;
 		}
 	}
 
@@ -410,8 +422,24 @@
 		border-bottom: 1px solid $color-line;
 		.wrap{
 			display:flex;
-			justify-content: space-between;
 			align-items:center;
+			justify-content: space-between;
+		}
+
+		.toggle-switch{
+			margin:0;
+			margin-left:auto;
+			width:auto;
+		}
+
+		.select-box{
+			@include vw(width, 156px);
+			justify-content: flex-start;
+			.select{
+				@include vw(width, 105px);
+			}
+
+			.select-text-end{@include vw(width, 43px);}
 		}
 
 
@@ -432,7 +460,7 @@
 		.wrap{
 			.tab-menu{
 				padding-left:0;
-				padding-bottom:0;
+				//padding-bottom:0;
 			}
 
 			.tab-small-menu{
@@ -625,12 +653,15 @@
 	}
 
 	.section-exam-toggle{
-		.toggle-box dl dd p{
-			@include vw(margin-top, 8px);
-			&:first-child{margin-top:0;}
+		.toggle-box{
+			@include vw(padding-bottom, 20px);
+			dl dd p{
+				@include vw(margin-top, 8px);
+				&:first-child{margin-top:0;}
 
-			@include vw(padding-left, 14px);
-			@include vw(text-indent, -14px);
+				@include vw(padding-left, 14px);
+				@include vw(text-indent, -14px);
+			}
 		}
 	}
 

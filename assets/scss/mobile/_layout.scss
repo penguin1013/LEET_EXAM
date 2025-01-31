@@ -429,7 +429,7 @@
 				display: flex;
 				align-items: center;
 				height: 100%;
-				@include vw(margin-right, 20px);
+				@include vw(margin-right, 32px);
 				&:first-child {
 					@include vw(margin-left, 20px);
 				}
@@ -612,7 +612,7 @@
 	.section-header {
 		.header-title {
 			position: relative;
-			border-bottom: 1px solid $color-light-brown;
+			border-bottom: 1px solid $color-line;
 			display: flex;
 			align-items: center;
 			justify-content: center;
